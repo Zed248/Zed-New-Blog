@@ -11,6 +11,8 @@
     --pure-black: #000;
     --pale-black: rgba(0, 0, 0, 0.571);
     --transparancy: #5025d151;
+
+    --active-bg-color: rgba(4, 25, 35, 0.822);
 }
 
 /*------------ Variables ------------- */
@@ -106,6 +108,19 @@
     padding: 1em;
 }
 
+._pad_left_1 {
+    padding-left: 1em;
+}
+
+._pad_right_1 {
+    padding-right: 1em;
+}
+
+._pad_right_2 {
+    padding-right: 2em;
+}
+
+
 ._pad_2 {
     padding: 2em;
 }
@@ -115,6 +130,9 @@
     border-radius: 12px;
 }
 
+._justify {
+    text-align: justify;
+}
 
 /* -------------- BTN -------------- */
 
@@ -125,6 +143,7 @@
     outline: none;
     border: none;
     border-radius: 15px;
+    z-index: 2;
 }
 
 ._default_bgcolor_1 {
@@ -172,6 +191,11 @@ body {
     height: 1000px;
 }
 
+body.active {
+    background-color: var(--active-bg-color);
+    color: var(--pure-white);
+}
+
 .__canvas {
     position: fixed;
     top: 0;
@@ -189,11 +213,23 @@ body {
 .__nav {
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding: 0px 10em 0px 10em;
     height: 80px;
     background-color: var(--pure-white);
+    user-select: none;
+    z-index: 5;
+}
+
+.__nav.active {
+    color: var(--pure-white);
+    background-color: var(--active-bg-color);
+}
+
+.__nav.active a {
+    color: var(--pure-white);
 }
 
 .__nav.sticky {
@@ -203,13 +239,37 @@ body {
     box-shadow: 1px 5px 13px #0e0d0d3a;
 }
 
+.__switches {
+    width: 100%;
+    height: 35px;
+}
+
+.__progress-container {
+    width: 100%;
+    height: 5px;
+    background-color: rgba(9, 8, 8, 0.256);
+}
+
+.__progress-bar {
+    width: 0%;
+    height: 5px;
+    background-color: #00b67a;
+}
+
+.__nav_link_container {
+    width: 100%;
+    height: 80px;
+    padding: 0px 1em 0px 1em;
+}
+
 
 .__title {
     width: 30%;
-    color: var(--pale-black);
     display: flex;
     justify-content: left;
     align-items: center;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .__link {
@@ -221,15 +281,130 @@ body {
 
 .__link a {
     text-decoration: none;
-    color: var(--pale-black);
+    color: black;
+}
+
+/* -----------------floating side bar----------------- */
+.__sidebar_container {
+    width: 50px;
+    height: 95vh;
+    position: absolute;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: -55px;
+}
+
+.__sidebar_container.active {
+    left: 0px;
+}
+
+.__link_holder {
+    margin: 0;
+    padding: 0;
 }
 
 
-.__link a:hover {
-    color: aqua;
-    background-color: red;
+.__sidebar_link {
+    position: absolute;
+    left: 0;
+    top: 210px;
+    height: auto;
+    background-color: black;
+    overflow: hidden;
+    border-radius: 8px;
+    z-index: 4;
+    display: block;
+}
+
+
+
+._logo_and_text {
+    list-style: none;
+}
+
+
+._logo_and_text a {
+    position: relative;
+    background-color: black;
+    color: gray;
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    text-decoration: none;
     transition: 0.5s;
+    z-index: 4;
+    transition: width 0.5s linear;
 }
+
+
+._logo_and_text a i {
+    position: relative;
+    min-width: 50px;
+    height: 50px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.5em;
+}
+
+._logo_and_text a span {
+    min-width: 200px;
+    /*hold actual with */
+    display: inline-block;
+}
+
+
+._logo_and_text a:hover,
+._logo_and_text a.active {
+    color: rgb(2, 159, 186);
+    transition: all 0.5s ease;
+    width: 200px;
+    opacity: 0.1;
+    animation-name: fadein;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+/* ---------------- drop down --------------  style */
+
+._parent:hover>._child {
+    display: block;
+    opacity: 0.1;
+    animation-name: fadein;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+._parent li {
+    width: 200px;
+}
+
+._parent a span {
+    display: inline-block;
+    width: 200px;
+}
+
+
+._child {
+    display: none;
+}
+
+._child li {
+    list-style: none;
+}
+
+/* -------------- dropdown -end-------- */
 
 
 .__section {
@@ -258,6 +433,13 @@ body {
     height: 300px;
 }
 
+._des_header {
+    cursor: pointer;
+}
+
+._des_context p {
+    text-align: justify;
+}
 
 
 .__toggle_tabs_container {
@@ -265,5 +447,3 @@ body {
     padding: 1em;
     border-radius: 12px;
 }
-
-

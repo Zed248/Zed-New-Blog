@@ -12,7 +12,6 @@ canvas.addEventListener("click", function (event) {
     if (clickableElements.length > 0) {
         clickableElements[0].click();
 
-        console.log("Lee")
     }
 
 });
