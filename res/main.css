@@ -188,12 +188,13 @@
 
 body {
     width: 100%;
-    height: 1000px;
+    transition: 0.5s;
 }
 
 body.active {
     background-color: var(--active-bg-color);
     color: var(--pure-white);
+    transition: 0.5s;
 }
 
 .__canvas {
@@ -293,7 +294,8 @@ body.active {
     display: flex;
     justify-content: center;
     align-items: center;
-    left: -55px;
+    left: 0;
+    /* left: -55px; */
 }
 
 .__sidebar_container.active {
