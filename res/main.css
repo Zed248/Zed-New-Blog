@@ -295,12 +295,9 @@ body.active {
     justify-content: center;
     align-items: center;
     left: 0;
-    /* left: -55px; */
+
 }
 
-.__sidebar_container.active {
-    left: 0px;
-}
 
 .__link_holder {
     margin: 0;
@@ -318,8 +315,25 @@ body.active {
     border-radius: 8px;
     z-index: 4;
     display: block;
+    left: -55px;
+    transition: 0.5s;
 }
 
+
+.__sidebar_link.show {
+    left: 0px;
+    animation: pop-up 1s;
+}
+
+
+@keyframes pop-up {
+    from {
+        box-shadow: 1px 4px 13px #00b67a;
+    }
+    to {
+
+    }
+}
 
 
 ._logo_and_text {

@@ -213,8 +213,15 @@
 
 
             $("#menu_icon").click(function () {
-                ("#side_bar_container").addClass('active')
-                console.log("Menu")
+                if(!menuOpen) {
+                    console.log("on")
+                    $(".__sidebar_link").addClass("show");
+                    menuOpen = true;
+                } else {
+                    console.log("Off");
+                    $(".__sidebar_link").removeClass("show");
+                    menuOpen = false;
+                }
             })
 
 
