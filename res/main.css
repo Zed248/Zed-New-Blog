@@ -245,6 +245,11 @@ body.active {
     height: 35px;
 }
 
+.__switches a {
+    text-decoration: none;
+    color: var(--pure-black);
+}
+
 .__progress-container {
     width: 100%;
     height: 5px;
@@ -463,3 +468,90 @@ body.active {
     padding: 1em;
     border-radius: 12px;
 }
+
+
+
+
+
+
+
+/* --------------------- Login-in ------------------------ */
+.__log_in_box_container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--pale-black);
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.__log_in_box {
+    width: 435px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+
+.__log_in_items {
+    min-width: 450px;
+    height: auto;
+    background-color: #00000028;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1em;
+    transition: 1s;
+
+}
+
+.__log_in_items.slide {
+    margin-left: -415px;
+    transition: 1s;
+}
+
+
+._input_container {
+    line-height: 45px;
+}
+
+._input_container ._label {
+    display: inline-block;
+    width: 170px;
+}
+
+._input_container input[type="text"], ._input_container input[type="password"] {
+    background-color: red;
+}
+
+
+
+.__sign_up_container {
+    min-width: 370px;
+    height: 500px;
+    background-color: #eceeee;
+    margin: 1em;
+    border-radius: 15px;
+}
+
+
+.__sign_up_container h1 {
+    text-align: center;
+}
+
+.__log_in_container {
+    min-width: 370px;
+    height: 500px;
+    background-color: #eceeee;
+    margin:1em 2em 1em 2em;
+    border-radius: 15px;
+}
+
+
+.__log_in_container h1 {
+    text-align: center;
+}
+
+

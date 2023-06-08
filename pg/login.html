@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../res/main.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="__log_in_box_container">
+        <button onclick="slide()">Test</button>
+        <div class="__log_in_box">
+            <div class="__log_in_items">
+                <div class="__sign_up_container">
+                    <h1>Sign Up</h1>
+                    <p>Create Account or <a href="#" id="_log_in_link">Log in</a></p>
+                    <div class="_input_container">
+                        <span class="_label" for="firstname">First Name : </span><input type="text" name="firstname"
+                            placeholder="First Name">
+                    </div>
+                    <div class="_input_container">
+                        <span class="_label" for="Lastname">Last Name : </span><input type="text" name="Lastname"
+                            placeholder="Last Name">
+                    </div>
+                    <div class="_input_container">
+                        <span class="_label" for="username">Username : </span><input type="text" name="username"
+                            placeholder="Username">
+                    </div>
+                    <div class="_input_container">
+                        <span class="_label" for="username">Confirm Username : </span><input type="text" name="username"
+                            placeholder="Username">
+                    </div>
+                    <div class="_input_container">
+                        <span class="_label" for="password">Password : </span><input type="password" name="password"
+                            placeholder="Create a password">
+                    </div>
+                    <input type="submit" value="Sign Up">
+                </div>
+                <div class="__log_in_container">
+                    <h1>Log In</h1>
+                    <p>Log in or <a href="">Sign up</a></p>
+                    <div class="_input_container">
+                        <span class="_label" for="username">Username : </span><input type="text" name="username"
+                            placeholder="Username">
+                    </div>
+                    <div class="_input_container">
+                        <span class="_label" for="password">Password : </span><input type="password" name="password"
+                            placeholder="Password">
+                    </div>
+                    <input type="submit" value="Log in">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        let test = document.querySelector('.test');
+        let log_in_items = document.querySelector('.__log_in_items');
+
+
+        function slide() {
+            log_in_items.classList.toggle('slide');
+            console.log("Hello")
+        }
+        
+
+
+    </script>
+</body>
+
+</html>
