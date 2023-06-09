@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Playground</title>
+    <link rel="stylesheet" type="text/css" href="./main.css">
+    <link rel="stylesheet" type="text/css" href="../../fontawesome/css/all.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="top-bar">
+            <p class="editor-title">Zed's Playground</p><a href="../../index.html"><button>Return Home</button></a>
+        </div>
+        <div class="main-body">
+            <div class="side-bar">
+                <div id="btnscontainer">
+                    <div class="menu-container"></div>
+                    <div class="btn-container">
+                        <li id='btn1' class='btn active'>
+                            <div class='close' onclick='closeBtn1()'>+</div><i class="fa-brands fa-html5"></i>index.html
+                        </li>
+                        <li id='btn2' class='btn'>
+                            <div class='close' onclick='closeBtn2()'>+</div><i class="fa-brands fa-css3-alt"></i>style.css
+                        </li>
+                        <li id='btn3' class='btn'>
+                            <div class='close' onclick='closeBtn3()'>+</div><i class="fa-brands fa-js"></i>act.js
+                        </li>
+                    </div>
+                </div>
+                <div class="tool-bar">
+                    <div class="add" onclick="fileAdd()">+</div>
+                    <button class="run" id="run-btn">Run</button>
+                </div>
+            </div>
+            <div class="text-area-section" id="text-areas">
+                <div class="text-area-container">
+                    <div id="page1" style="display: block">
+                        <textarea id="html-code" placeholder="Enter HTML code here"></textarea>
+                    </div>
+                    <div id="page2">
+                        <textarea id="css-code" placeholder="">/*  CSS   */ body {font-family: Poppins;}</textarea>
+                    </div>
+                    <div id="page3">
+                        <textarea id="js-code" placeholder="">//JS Code here</textarea>
+                    </div>
+                </div>
+
+                <iframe id="preview" class="preview"></iframe>
+
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/JavaScript" src="./main.js"></script>
+<script>
+    //for Output
+    var runBtn = document.getElementById("run-btn");
+    var preview = document.getElementById("preview");
+
+    runBtn.addEventListener("click", function () {
+        var html = document.getElementById("html-code").value;
+        var css = document.getElementById("css-code").value;
+        var js = document.getElementById("js-code").value;
+
+        var content = "<html><head><style>" + css + "</style></head><body>" + html + "</body></html>";
+
+        var iframeDoc = preview.contentDocument || preview.contentWindow.document;
+        iframeDoc.open();
+        iframeDoc.write(content);
+        iframeDoc.close();
+
+        preview.contentWindow.eval(js);
+
+    });
+
+
+    
+</script>
+
+
+</html>

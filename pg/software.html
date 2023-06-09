@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zed Blog</title>
+    <link rel="stylesheet" type="text/css" href="../res/main.css">
+    <link rel="stylesheet" type="text/css" href="../res/responsive.css">
+    <link rel="stylesheet" type="text/css" href="../fontawesome/css/all.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav>
+            <div class="switches">
+                <span class="mood-label">Dark</span><i id="mood-icon" class="fa-solid fa-moon fa-1x"></i>
+                <span class="login-label">Log in</span><i class="fa-solid fa-unlock fa-1x"></i>
+                <span class="menu-label">Menu</span><i id="menu_icon" class="fa-solid fa-sliders fa-1x"></i>
+            </div>
+            <div class="navigation" id="navbar">
+                <div class="sub-nav-bar">
+                    <p class="blog-title">Zed Blog</p>
+                    <ul class="links">
+                        <a href="../index.html">
+                            <li>Home</li>
+                        </a>
+                        <a href="../pages/myview.html">
+                            <li>myView</li>
+                        </a>
+                        <a href="../pages/about.html">
+                            <li>About me</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" id="myScrollIndicatingBar"></div>
+                </div>
+            </div>
+            <div class="side-bar-container">
+                <nav class="link">
+                    <ul class="link-holder">
+                        <li class="logo-and-text parent">
+                            <a href="#" class="ok">
+                                <i class="fas fa-code"></i>
+                                <span class="nav-item">Web Development</span>
+                            </a>
+                            <ul class="child">
+                                <li><a href="../pages/html5.html"><i class="fa-brands fa-html5"></i>HTML</a>
+                                </li>
+                                <li><a href="../pages/css3.html"><i class="fa-brands fa-css3-alt"></i>CSS</a>
+                                </li>
+                                <li><a href="../pages/js.html"><i class="fa-brands fa-node-js"></i>JavaScript</a>
+                                </li>
+                                <li><a href="../pages/tutorial.html"><i class="fa-brands fa-youtube"></i>Tutorial
+                                        Video</a></li>
+                            </ul>
+
+                        </li>
+                        <li class="logo-and-text">
+                            <a href="../pages/about.html">
+                                <i class="fas fa-user"></i>
+                                <span class="nav-item">About</span>
+                            </a>
+                        </li>
+                        <li class="logo-and-text">
+                            <a href="../pages/photoshop.html">
+                                <i class="fas fa-shapes"></i>
+                                <span class="nav-item">Photoshop</span>
+                            </a>
+                        </li>
+
+                        <li class="logo-and-text">
+                            <a href="" class="active">
+                                <i class="fa-brands fa-app-store-ios"></i>
+                                <span class="nav-item">Software Download</span>
+                            </a>
+                        </li>
+
+                        <li class="logo-and-text">
+                            <a href="../pages/youtube.html">
+                                <i class="fa-brands fa-youtube"></i>
+                                <span class="nav-item">My Channel</span>
+                            </a>
+                        </li>
+
+
+
+
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+        <section>
+            <div class="software-download-show-case">
+                <h1>Select to download your software</h1>
+                <select class="d-list" onchange="software()">
+                    <option value="">--Select Your Software to Download --</option>
+                    <option value="1">Adobe Photoshop CS3</option>
+                    <option value="2">Adobe Photoshop CS6 Extended</option>
+                    <option value="3">Microsoft Office 2013 Professional Plus</option>
+                    <option value="4">Microsoft Office 2016 Professional Plus</option>
+                    <option value="5">Internet Download Manager 6.0</option>
+                    <option value="6">Adobe PageMaker 7.0</option>
+                    <option value="7">Mavis Beacon Typing Tutor</option>
+                    <option value="8">Zapya</option>
+                    <option value="9">Visual Studio Code</option>
+                </select>
+                <p>Click Get Link and Download Your Software</p>
+                <h4 id="soft_name">Software Download Publisher</h4>
+                <div class="software-d-image-container">
+                    <img id="soft_img" src="">
+                </div>
+                <p id="soft_descri">You can download software on my blog for free and safe!</p>
+                <a id="get_link">Get Link</a>
+            </div>
+
+
+
+
+        </section>
+        <footer>
+            <div class="footer-links">
+                <a href=""><i class="fa-brands fa-facebook fa-2x"></i></a>
+                <a href=""><i class="fa-brands fa-tiktok fa-2x"></i></a>
+                <a href=""><i class="fa-brands fa-telegram fa-2x"></i></a>
+                <a href=""><i class="fa-brands fa-youtube fa-2x"></i></a>
+                <a href=""><i class="fa-brands fa-instagram fa-2x"></i></a>
+            </div>
+
+            <div class="footer-items">
+                <div class="about-us-link">
+                    <h4>About me</h4>
+                    <a href="../pages/about.html">Who I am</a>
+                    <a href="../pages/hireme.html">Hire me</a>
+                    <a href="../pages/news.html">News</a>
+                    <a href="../pages/project.html">Current Process of Project</a>
+                </div>
+
+                <div class="service">
+                    <h4>Service</h4>
+                    <a href="../pages/windows.html">Windows Installation & Troubleshooting</a>
+                    <a href="../pages/windows.html">Softwares Istallation</a>
+                    <a href="../pages/my-party.html">Freelence Projects</a>
+                </div>
+
+                <div class="benefit">
+                    <h4>Get Benefits with me</h4>
+                    <li>Building Web Page</li>
+                    <li>Create Web Application</li>
+                    <li>Mobile Phone Application</li>
+                    <li>Building frameworks for Web Page</li>
+                    <li>Troubleshooting Windows</li>
+                </div>
+
+                <div class="support">
+                    <h4>Support</h4>
+                    <a href="../pages/faq.html">FAQs</a>
+                    <a href="../pages/about.html">Contact me</a>
+                    <a href="../pages/software.html">Software Download (PC)</a>
+                </div>
+
+                <div class="copyright">
+                    <h3>Zed Blog</h3>
+                    <p>Rakkha's Design &copy; 2023</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script type="text/JavaScript" src="../res/main.js"></script>
+    <script type="text/JavaScript">
+        let d_list = document.querySelector('.d-list');
+        let down_btn = document.querySelector('#get_link')
+        let soft_name = document.querySelector('#soft_name');
+        let soft_desc = document.querySelector('#soft_descri');
+        let soft_img = document.querySelector('#soft_img');
+
+
+        let softwareArray = [
+            {
+                name: "Adobe Photoshop CS3",
+                desc: "Adobe Photoshop CS3 is older version of Adobe Product, compitable with all Windows and capable of editing photos. Run on older version of PC.",
+                src: "https://i.pinimg.com/originals/25/ee/84/25ee8429dcdf50e88dc20d0d47847cd0.jpg",
+                href: "https://cs3"
+            },
+            {
+                name: "Adobe Photoshop CS6 Extended",
+                desc: "This is Adobe Photoshop",
+                src: "https://i.pinimg.com/originals/a3/1f/26/a31f26c1e550a71632470c4cbfd08e15.jpg",
+                href: "https://cs6"
+            },
+            {
+                name: "Micorsoft Office 2013 Professional Plus",
+                desc: "Microsoft Office 2013 Not of pre-activated Software, free tools for your documentation. You can download Activator, I have shared it on this blog. Thanks for download! Free & Safe!",
+                src: "https://i.pinimg.com/originals/23/2a/16/232a16e76d4bd11eb8f9a1f23a154715.jpg",
+                href: "https://msoffice13"
+            },
+            {
+                name: "Microsoft Office 2016 Professional Plus",
+                desc: "Download for free of Microsoft Office 2016 Professional Plus. Newer version of Office, many features are inculded in this version. Manage your documentation and feel new features. Thanks!",
+                src: "https://i.pinimg.com/originals/a1/8c/b0/a18cb0737779fa120b9c3fee7bf0b617.jpg",
+                href: "https://msoffice16"
+            },
+            {
+                name: "Internet Download Manager 6.0",
+                desc: "Super fast downloader for all link, it can be added to chrome and other browsers as extension. You can free up download time and safe! Just download and Install on your computer. Superfast for enlarge download size. Okay!",
+                src: "https://i.pinimg.com/originals/29/b9/da/29b9da3fe0ce566d0047e94d0593c730.jpg",
+                href: "https://IDM"
+            },
+            {
+                name: "Adobe Page Maker 7.0",
+                desc: "This is Adobe PageMaker 7.0, the best tool of Adobe. Documentation Management software, it should be installed on PC of printing services center. Useful for publishing & Print houses",
+                src: "https://i.pinimg.com/originals/16/60/e4/1660e4651ada8426db6b02263bdeb6cc.jpg",
+                href: "https://pm70"
+            },
+            {
+                name: "Mavis Beacon Typing Tutor",
+                desc: "Train your typing in this Software. Nice and tidy, containing typing game and good for train! ",
+                src: "https://i.pinimg.com/originals/53/be/65/53be65b5d146445baac9562a6452ed61.jpg",
+                href: "https://typing"
+            },
+            {
+                name: "Zapya",
+                desc: "Sharing large amount of size of file on local network, no internet is need to transfer. Transfer your file from your Phone to computer and vice versa.",
+                src: "https://i.pinimg.com/originals/ab/55/0f/ab550fa1efd9ccee90f002924d7599f5.png",
+                href: "https://zpya"
+            },
+            {
+                name: "Visual Studio Code",
+                desc: "The best tool for coding, So many extension for Software Development and Programming.",
+                src: "https://i.pinimg.com/originals/2d/88/63/2d886394c07b1e7c51296d0878ce72ca.webp",
+                href: "https://vscode"
+            }
+        ]
+
+        function software() {
+            if(d_list.value == "1") {
+                soft_name.innerHTML = softwareArray[0].name;
+                soft_desc.innerHTML = softwareArray[0].desc;
+                soft_img.src = softwareArray[0].src;
+                down_btn.href = softwareArray[0].href;
+            } else if(d_list.value == "2") {
+                soft_name.innerHTML = softwareArray[1].name;
+                soft_desc.innerHTML = softwareArray[1].desc;
+                soft_img.src = softwareArray[1].src;
+                down_btn.href = softwareArray[1].href;
+            } else if(d_list.value == "3") {
+                soft_name.innerHTML = softwareArray[2].name;
+                soft_desc.innerHTML = softwareArray[2].desc;
+                soft_img.src = softwareArray[2].src;
+                down_btn.href = softwareArray[2].href;
+            } else if(d_list.value == "4") {
+                soft_name.innerHTML = softwareArray[3].name;
+                soft_desc.innerHTML = softwareArray[3].desc;
+                soft_img.src = softwareArray[3].src;
+                down_btn.href = softwareArray[3].href;
+            } else if(d_list.value == "5") {
+                soft_name.innerHTML = softwareArray[4].name;
+                soft_desc.innerHTML = softwareArray[4].desc;
+                soft_img.src = softwareArray[4].src;
+                down_btn.href = softwareArray[4].href;
+            } else if(d_list.value == "6") {
+                soft_name.innerHTML = softwareArray[5].name;
+                soft_desc.innerHTML = softwareArray[5].desc;
+                soft_img.src = softwareArray[5].src;
+                down_btn.href = softwareArray[5].href;
+            } else if(d_list.value == "7") {
+                soft_name.innerHTML = softwareArray[6].name;
+                soft_desc.innerHTML = softwareArray[6].desc;
+                soft_img.src = softwareArray[6].src;
+                down_btn.href = softwareArray[6].href;
+            } else if(d_list.value == "8") {
+                soft_name.innerHTML = softwareArray[7].name;
+                soft_desc.innerHTML = softwareArray[7].desc;
+                soft_img.src = softwareArray[7].src;
+                down_btn.href = softwareArray[7].href;
+            } else if(d_list.value == "9") {
+                soft_name.innerHTML = softwareArray[8].name;
+                soft_desc.innerHTML = softwareArray[8].desc;
+                soft_img.src = softwareArray[8].src;
+                down_btn.href = softwareArray[8].href;
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

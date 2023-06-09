@@ -1,24 +1,27 @@
 
 //for Night Mood & Day Mood
 var mood_label = document.querySelector('._mood-label');
+var mood_btn = document.querySelector('#_mood_btn')
 var mood_icon = document.querySelector('#mood-icon');
 
 
 let menuOpen = false;
 
-mood_icon.addEventListener('click', () => {
+mood_btn.addEventListener('click', function(){
     if(!menuOpen) {
         mood_icon.className = "fa-solid fa-sun fa-1x";
         mood_label.innerText = "Light";
         menuOpen = true;
         document.querySelector('body').classList.add('active')
         document.querySelector('.__nav').classList.add('active')
+        document.querySelector('.__background_showcase').classList.add('active');
     } else {
         mood_icon.className = "fa-solid fa-moon fa-1x";
         mood_label.innerText = "Dark";
         menuOpen = false;
         document.querySelector('body').classList.remove('active')
         document.querySelector('.__nav').classList.remove('active')
+        document.querySelector('.__background_showcase').classList.remove('active');
     }
 })
 

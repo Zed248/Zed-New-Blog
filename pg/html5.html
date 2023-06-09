@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5</title>
+    <link type="text/css" rel="stylesheet" href="../fontawesome/css/all.min.css">
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Carter+One&family=Cinzel:wght@500&family=Lexend+Deca:wght@300&family=Luckiest+Guy&family=Poppins:wght@300&family=Rouge+Script&family=Yanone+Kaffeesatz&display=swap');
+
+        :root {
+            --main-title-font-style: 'Archivo Black';
+            --sub-title-font-style: 'Carter One';
+            --primary-font-style: 'Poppins';
+            --handwriting: 'Rouge Script';
+            --link-font-style: 'Lexend Deca';
+            --square-font-style: 'Yanone Kaffeesatz';
+
+            /* main colors */
+            --blog-primary-color: linear-gradient(to left, rgba(0, 16, 34, 0.911), rgba(3, 39, 48, 0.89));
+            --blog-active-bg-color: #00758a;
+            --hover-color: #06ffff;
+            --primary-text-color: rgba(255, 255, 255, 0.678);
+            --pure-white: #ffffff;
+            --black: #000000;
+            --gray: gray;
+            --test-color: rgba(0, 90, 131, 0.336);
+
+
+            /* font-size */
+            --font-max: 23pt;
+            --font-huge: 16pt;
+            --font-large: 13pt;
+            --font-medium: 11pt;
+            --font-small: 9pt;
+            --font-min: 7pt;
+        }
+
+        h2 {
+            font-family: var(--primary-font-style);
+            color: var(--primary-text-color);
+            font-size: var(--font-medium);
+            padding: 0 0 1em 0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        body {
+            width: 100%;
+            height: auto;
+            background: var(--blog-primary-color);
+        }
+
+        .wrapper {
+            width: 100%;
+
+        }
+
+        section {
+            width: 100%;
+            float: right;
+            padding-left: 240px;
+            padding-right: 2em;
+            padding-top: 5em;
+
+        }
+
+        .html-size-bar {
+            width: 230px;
+            height: 1000vh;
+            border-right: 2px solid rgba(220, 20, 60, 0.815);
+            position: absolute;
+        }
+
+        .html-size-bar::before {
+            position: fixed;
+            content: 'Console.log("Hello World") >>HTML<<';
+            color: crimson;
+            font-family: var(--primary-font-style);
+            font-size: 23pt;
+            display: flex;
+            background-color: #06060641;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 108px;
+            border-bottom: 2px solid crimson;
+        }
+
+        .html-size-bar-circle1 {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background-color: crimson;
+            border-radius: 50%;
+            transform: translate(219px, 100px);
+            z-index: 5;
+            animation: down-up1 4s infinite;
+        }
+
+        @keyframes down-up1 {
+            0% {
+                transform: translate(219px, 0px)
+            }
+
+            50% {
+                transform: translate(219px, 700px);
+            }
+
+            100% {
+                transform: translate(219px, 0px);
+            }
+
+        }
+
+
+        .html-size-bar-circle5 {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background-color: crimson;
+            border-radius: 50%;
+            transform: translate(219px, 100px);
+            z-index: 5;
+            animation: left-right 7s infinite;
+        }
+
+        @keyframes left-right {
+            0% {
+                transform: translate(0px, 100px)
+            }
+
+            50% {
+                transform: translate(800px, 100px);
+            }
+
+            100% {
+                transform: translate(0px, 100px);
+            }
+
+        }
+
+
+
+
+        .html-size-bar-circle2 {
+            position: fixed;
+            width: 30px;
+            height: 30px;
+            background-color: crimson;
+            border-radius: 50%;
+            transform: translate(214px, 0px);
+            z-index: 5;
+            animation: down-up 5s infinite;
+        }
+
+        @keyframes down-up {
+            0% {
+                transform: translate(214px, 0px)
+            }
+
+            50% {
+                transform: translate(214px, 700px);
+            }
+
+            100% {
+                transform: translate(214px, 0px);
+            }
+
+        }
+
+        .html-size-bar-circle3 {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background-color: crimson;
+            border-radius: 50%;
+            transform: translate(224px, 450px);
+            z-index: 5;
+            animation: down-up3 6s infinite;
+        }
+
+        @keyframes down-up3 {
+            0% {
+                transform: translate(224px, 0px)
+            }
+
+            50% {
+                transform: translate(224px, 700px);
+            }
+
+            100% {
+                transform: translate(224px, 0px);
+            }
+
+        }
+
+        .html-size-bar-circle4 {
+            position: fixed;
+            width: 15px;
+            height: 15px;
+            background-color: crimson;
+            border-radius: 50%;
+            transform: translate(222px, 650px);
+            z-index: 5;
+            animation: down-up4 4s infinite;
+        }
+
+        @keyframes down-up4 {
+            0% {
+                transform: translate(222px, 0px)
+            }
+
+            50% {
+                transform: translate(222px, 700px);
+            }
+
+            100% {
+                transform: translate(222px, 0px);
+            }
+
+        }
+
+        .side-bar-items {
+            position: absolute;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 1em;
+            background-color: #000000;
+        }
+
+        .side-bar-items.active {
+            display: none;
+        }
+
+        /* ------------------------------ Menu --------------------------- */
+
+        .menu-container {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            overflow: hidden;
+            padding-left: 1em;
+            margin-top: 120px;
+            background-color: #000000;
+        }
+
+        .menu-container-h4 {
+            display: flex;
+            justify-content: flex-start;
+            padding-left: 1em;
+            overflow: hidden;
+            color: white;
+        }
+
+        .menu-container-h4.active {
+            display: none;
+        }
+
+        .menu-btn {
+            width: 30px;
+            height: 30px;
+            margin-right: 1em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .m-btn {
+            width: 29px;
+            height: 3px;
+            background-color: white;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .m-btn::before {
+            position: absolute;
+            content: "";
+            width: 29px;
+            height: 3px;
+            background-color: white;
+            border-radius: 12px;
+            transform: translateY(-8px);
+        }
+
+        .m-btn::after {
+            position: absolute;
+            content: "";
+            width: 29px;
+            height: 3px;
+            background-color: white;
+            border-radius: 12px;
+            transform: translateY(8px);
+        }
+
+        .side-bar-items a {
+            text-decoration: none;
+            color: white;
+            font-family: var(--primary-font-style);
+
+        }
+
+
+
+        .code-display-container {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .code-text-area {
+            width: 50%;
+            display: flex;
+            justify-content: flex-start;
+
+        }
+
+        .line-numbers {
+            display: flex;
+            flex-direction: column;
+            width: 25px;
+            background-color: rgb(28, 30, 28);
+            color: #fff;
+            text-align: right;
+            padding-right: 5px;
+            line-height: 23px;
+        }
+
+
+        .html-code-area {
+            width: 100%;
+            height: auto;
+            background-color: rgba(9, 8, 8, 0.314);
+            color: white;
+            line-height: 23px;
+            outline: none;
+            border: none;
+            overflow: hidden;
+            padding-left: 5px;
+        }
+
+        .html-output-area {
+            color: white;
+        }
+
+
+        .html-expalanation {
+            width: 50%;
+            color: white;
+            padding: 1em;
+        }
+
+        .html-element-selector {
+            width: 100%;
+            height: auto;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 2em 0 3em 0;
+        }
+
+        .html-element-selector h3 {
+            font-family: var(--primary-font-style);
+        }
+
+        #ele-input {
+            width: 300px;
+            height: 34px;
+            background: #18caea44;
+            color: rgb(255, 255, 255);
+            outline: none;
+            border: none;
+            margin: 1em;
+            padding-left: 1em;
+            font-family: var(--primary-font-style);
+        }
+
+        #ele-input::placeholder {
+            color: white;
+        }
+
+        .show-ele-code {
+            width: 100%;
+            height: 50px;
+            color: rgb(0, 230, 251);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: var(--primary-font-style);
+        }
+
+        h4 {
+            font-family: var(--link-font-style);
+            font-weight: normal;
+            margin: 1em;
+            background-color: rgba(250, 235, 215, 0.226);
+            border-bottom: 1px solid crimson;
+            width: 100%;
+            height: 40px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        p {
+            font-family: var(--primary-font-style);
+            margin: 1em;
+            font-size: var(--font-medium);
+        }
+
+        .html-ele-model {
+            width: 500px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(0, 230, 251);
+            box-shadow: 1px 5px 14px rgba(220, 20, 60, 0.507);
+            border-radius: 15px;
+            font-family: var(--primary-font-style);
+        }
+
+        .html-showcase-one {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 2em 0 2em 0;
+            padding: 3em 0 3em 0;
+            background-color: rgba(0, 0, 0, 0.582);
+            border-radius: 50px;
+        }
+
+        .html-showcase-box {
+            width: 100%;
+            height: 400px;
+            /* background-color: red; */
+            margin: 4em 0 2em 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .html-showcase-one h2 {
+            color: crimson;
+            font-family: var(--sub-title-font-style);
+            font-weight: normal;
+            font-size: var(--font-huge);
+        }
+
+        .html-showcase-one p {
+            color: var(--primary-text-color);
+            font-family: var(--link-font-style);
+        }
+
+        .html-case {
+            position: absolute;
+            width: 400px;
+            height: 350px;
+            z-index: 1;
+            border-radius: 15px;
+            transform: translateX(-80px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50pt;
+            font-family: var(--main-title-font-style);
+            filter: brightness(1) blur(0.5px);
+            background: linear-gradient(to left, #32133b46 0.25%, #05426b3a);
+            color: #06ffff;
+            letter-spacing: 4px;
+            border: 0.5px solid rgba(220, 20, 60, 0.959);
+
+        }
+
+        .css-case {
+            position: absolute;
+            width: 400px;
+            height: 300px;
+            background: linear-gradient(to left, #741ebb1f 0.25%, #04133557);
+            filter: brightness(0.9) blur(0.8px);
+            color: crimson;
+            z-index: 3;
+            border-radius: 30px;
+            transform: translate(90px, 78px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50pt;
+            font-family: var(--main-title-font-style);
+            letter-spacing: 4px;
+            border: 0.5px solid rgba(220, 20, 60, 0.959);
+
+        }
+
+        .js-case {
+            position: absolute;
+            width: 350px;
+            height: 250px;
+            background: linear-gradient(to left, #05a045a4 0.25%, #05426b3a);
+            color: purple;
+            z-index: 3;
+            border-radius: 30px;
+            transform: translate(150px, -125px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50pt;
+            font-family: var(--main-title-font-style);
+            letter-spacing: 4px;
+            border: 0.5px solid rgba(220, 20, 60, 0.959);
+            filter: brightness(1) blur(0.8px);
+        }
+
+        .sh-link {
+            /* background-color: red; */
+            position: relative;
+            transform: translate(-66px, 155px);
+            z-index: 5;
+            width: 400px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .sh-link a {
+            text-decoration: none;
+            font-family: var(--primary-font-style);
+            margin: 0.2em;
+            color: white;
+            width: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+        }
+
+
+        .sh-a1 {
+            background-color: #b8015d7a;
+            box-shadow: 1px 2px 2px crimson;
+            transition: 0.3s;
+        }
+
+        .sh-a1:hover {
+            background-color: #b8015d;
+        }
+
+        .sh-a2 {
+            background-color: #320083b2;
+            box-shadow: 1px 2px 2px crimson;
+            transition: 0.3s;
+        }
+
+        .sh-a2:hover {
+            background-color: #4c02c4;
+        }
+
+        .sh-a3 {
+            background-color: #048d929c;
+            box-shadow: 1px 2px 2px crimson;
+            transition: 0.3s;
+        }
+
+        .sh-a3:hover {
+            background-color: #02abb1;
+        }
+
+
+
+        .html-showcase-slider-container h3 {
+            font-family: var(--link-font-style);
+            color: var(--primary-text-color);
+            padding: 1em 0 1em 0;
+        }
+
+        .html-showcase-slider-container p {
+            color: var(--primary-text-color);
+            padding: 1em 0 2em 0;
+            font-family: var(--primary-font-style);
+        }
+
+        table {
+            width: 100%;
+            color: rgb(16, 163, 177);
+            font-family: var(--primary-font-style);
+        }
+
+        th,
+        td {
+            border-bottom: 1px solid white;
+            border-left: 1px solid gray;
+            max-width: fit-content;
+            min-width: 170px;
+            text-align: center;
+        }
+
+
+
+
+
+        /* Responsive */
+        @media screen and (max-width: 970px) {
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            .code-display-container {
+                flex-direction: column;
+            }
+
+            .code-text-area {
+                width: 100%;
+            }
+
+            .html-expalanation {
+                width: 100%;
+                padding: 1em;
+            }
+
+            section {
+                width: 100%;
+                padding-left: 0 0 0 250px;
+            }
+        }
+    </style>
+
+<body>
+    <div class="wrapper">
+
+        <div class="html-size-bar-circle1"></div>
+        <div class="html-size-bar-circle2"></div>
+        <div class="html-size-bar-circle3"></div>
+        <div class="html-size-bar-circle4"></div>
+        <div class="html-size-bar-circle5"></div>
+
+        <div class="html-size-bar">
+            <div class="menu-container">
+                <div class="menu-btn">
+                    <div class="m-btn"></div>
+                </div>
+                <h3 class="menu-container-h4">Elements</h3>
+            </div>
+            <div class="side-bar-items">
+                <a href="">a</a>
+                <a href="">b</a>
+                <a href="">div</a>
+                <a href="">ul</a>
+                <a href="">li</a>
+                <a href="">ol</a>
+                <a href="">marquee</a>
+                <a href="">i</a>
+                <a href="">h1</a>
+                <a href="">h2</a>
+                <a href="">h3</a>
+                <a href="">h4</a>
+                <a href="">h5</a>
+                <a href="">h6</a>
+                <a href="">details</a>
+                <a href="">summary</a>
+                <a href="">p</a>
+            </div>
+        </div>
+
+
+        <section>
+            <div class="html-element-selector">
+                <h3>Element Selector</h3>
+                <p>This is a playground Element Extractor of HTML Code, you can add every html elements in input. Type
+                    your element without parenthesis symbol.</p>
+                <input id="ele-input" type="text" name="elements" placeholder="Enter html elements">
+                <h4>Code Sample</h4>
+                <div class="show-ele-code"></div>
+                <h4>Output</h4>
+                <div class="html-ele-model">
+                    Hello
+                </div>
+            </div>
+            <div class="code-display-container">
+                <div class="code-text-area">
+                    <pre class="line-numbers"></pre>
+                    <textarea class="html-code-area">
+                    </textarea>
+                </div>
+                <div class="html-expalanation">
+                    <div class="html-output-area">
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="html-showcase-one">
+                <h2>Web Development</h2>
+                <p>Hello</p>
+                <div class="sh-link">
+                    <a href="" class="sh-a1">HTML</a><a href="" class="sh-a2">CSS</a><a href="" class="sh-a3">JS</a>
+                </div>
+                <div class="html-showcase-box">
+                    <div class="html-case">
+                        HTML5
+                    </div>
+                    <div class="css-case">
+                        CSS3
+                    </div>
+                    <div class="js-case">
+                        JS
+                    </div>
+                </div>
+            </div>
+
+            <div class="html-slider-container">
+                <H4>HTML Tags, Attributes and Elements</H4>
+                <p>Here, this is how to cope with </p>
+            </div>
+
+            <table>
+                <tr>
+                    <th>Char</th>
+                    <th>Number</th>
+                    <th>Entity</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>∀</td>
+                    <td><span>&#</span>8704;</td>
+                    <td><span>&</span>forall;</td>
+                    <td>FOR ALL</td>
+                </tr>
+                <tr>
+                    <td>∂</td>
+                    <td><span>&#</span>8706;</td>
+                    <td><span>&</span>part;</td>
+                    <td>PARTIAL DIFFERENTIAL</td>
+                </tr>
+                <tr>
+                    <td>∃</td>
+                    <td><span>&#</span>0707;</td>
+                    <td><span>&</span>exist;</td>
+                    <td>THERE EXISTS</td>
+                </tr>
+                <tr>
+                    <td>∅</td>
+                    <td><span>&#</span>8709;</td>
+                    <td><span>&</span>empty;</td>
+                    <td>EMPTY SETS</td>
+                </tr>
+                <tr>
+                    <td>∇</td>
+                    <td><span>&#</span>8711;</td>
+                    <td><span>&</span>nabla;</td>
+                    <td>NABLA</td>
+                </tr>
+                <tr>
+                    <td>∈</td>
+                    <td><span>&#</span>8712;</td>
+                    <td><span>&</span>isin;</td>
+                    <td>ELEMENT OF</td>
+                </tr>
+                <tr>
+                    <td>∉</td>
+                    <td><span>&#</span>8713;</td>
+                    <td><span>&</span>notin;</td>
+                    <td>NOT AN ELEMENT OF</td>
+                </tr>
+                <tr>
+                    <td>∋</td>
+                    <td><span>&#</span>8715;</td>
+                    <td><span>&</span>ni;</td>
+                    <td>CONTAINS AS MEMBER</td>
+                </tr>
+                <tr>
+                    <td>∏</td>
+                    <td><span>&#</span>8719;</td>
+                    <td><span>&</span>prod;</td>
+                    <td>N-ARY PRODUCT</td>
+                </tr>
+                <tr>
+                    <td>∑</td>
+                    <td><span>&#</span>8721;</td>
+                    <td><span>&</span>sum;</td>
+                    <td>N-ARY SUMMATION</td>
+                </tr>
+            </table>
+
+
+
+        </section>
+    </div>
+
+
+
+    <script>
+        //for line number
+        const lineNumbers = document.querySelector('.line-numbers');
+        let textarea = document.querySelector('.html-code-area')
+        //output
+        let output = document.querySelector('.html-output-area');
+
+        let ele_input = document.querySelector('#ele-input');
+        let ele_model = document.querySelector('.html-ele-model')
+        let ele_showcode = document.querySelector('.show-ele-code');
+
+
+        //for Line Numbers of textarea
+        function updateLineNumbers() {
+            const lines = textarea.value.split('\n').length;
+            lineNumbers.textContent = Array.from({
+                length: lines
+            }, (_, i) => i + 1
+            ).join('\n');
+        }
+
+        textarea.addEventListener('keydown', updateLineNumbers);
+
+        updateLineNumbers();
+
+
+        //generate textarea height according to linenumbers height
+        let getHeight = 0;
+        let exeCuteElements;
+
+
+
+        function animate() {
+            requestAnimationFrame(animate)
+            getHeight = lineNumbers.clientHeight;
+            textarea.style.height = getHeight + "px";
+
+
+
+
+            //updatelinenumber
+            updateLineNumbers();
+
+            //for output
+            output.innerHTML = textarea.value;
+
+            //for elements
+            let getEle = ele_input.value;
+
+            let popSymbol = "<" + getEle + ">";
+            let closeSymbol = "</" + getEle + ">"
+
+            if (getEle == "") {
+                popSymbol = "";
+                closeSymbol = "";
+            }
+
+
+            exeCuteElements = popSymbol + "Hello" + closeSymbol
+
+            ele_model.innerHTML = exeCuteElements;
+            ele_showcode.innerText = exeCuteElements;
+
+        }
+
+        animate()
+
+
+
+        //html code
+        let codes = "";
+        let codeArrays = [];
+        let nL = "\n";
+
+        codes += "<!DOCTYPE html>" + nL + nL;
+        codes += "<head>" + nL + nL;
+        codes += "<title>HTML sample</title>" + nL + nL;
+        codes += "</head>" + nL + nL
+        codes += "<body>" + nL + nL
+        codes += "<h1>Hello World</h1>" + nL
+        codes += "<p>This is a paragraph</p>" + nL + nL + nL
+        codes += "</ body>" + nL
+        codes += "</ html>" + nL
+
+
+        codeArrays.push(codes)
+
+        textarea.value = codeArrays
+
+        output.innerHTML = codeArrays;
+
+
+
+    </script>
+
+    <script>
+        var menu_btn = document.querySelector('.menu-btn');
+        var side_bar = document.querySelector('.side-bar-items');
+        var menu_tile = document.querySelector('.menu-container-h4')
+
+        let menuOpen = false;
+
+        menu_btn.addEventListener('click', () => {
+            if (!menuOpen) {
+                side_bar.classList.add('active');
+                menu_tile.classList.add('active');
+                menuOpen = true;
+            } else {
+                side_bar.classList.remove('active')
+                menu_tile.classList.remove('active')
+                menuOpen = false;
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorials</title>
+    <link rel="stylesheet" type="text/css" href="../fontawesome/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: rgba(10, 30, 38, 0.932);
+            --secondary-color: rgba(3, 5, 104, 0.692);
+            --main-color: #ffffff;
+            --default-color: rgba(11, 153, 161, 0.16);
+            --default-branch-color: rgba(0, 202, 10, 0.796);
+
+            --primary-font-style: 'Poppins';
+        }
+
+        html::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        html::-webkit-scrollbar-button {
+            width: 10px;
+            height: 20px;
+            background-color: var(--main-color);
+            color: var(--black);
+        }
+
+        html::-webkit-scrollbar-track-piece:start {
+            background-color: transparent;
+            color: var(--main-color);
+        }
+
+        html::-webkit-scrollbar-track-piece:end {
+            background-color: transparent;
+            color: var(--main-color);
+        }
+
+        html::-webkit-scrollbar-track {
+            background-color: var(--main-color);
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        }
+
+
+        html::-webkit-scrollbar-thumb {
+            background-color: var(--secondary-color);
+            border-radius: 5px;
+        }
+
+
+        * {
+            width: 100%;
+            height: auto;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            /* background: linear-gradient(to left, #021c46d5, #16004bd3, #0d0049bd); */
+            font-family: Poppins, sans-serif;
+            color: #fff;
+        }
+
+        .wrapper {
+            width: 100%;
+            height: auto;
+        }
+
+        section {
+            width: 100%;
+            padding-left: 16em;
+            padding-right: 16em;
+            z-index: 5;
+            position: absolute;
+            padding-top: 40px;
+        }
+
+        .page-title {
+            width: 100%;
+            font-family: Carter One;
+            font-weight: normal;
+            border-bottom: 1px solid #fff;
+        }
+
+        .button-container {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .button-container i {
+            width: 100px;
+            height: 30px;
+            background-color: rgb(9, 53, 53);
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 1em;
+        }
+
+        iframe {
+            width: 100%;
+            height: 350px;
+            border: 1px solid rgba(212, 208, 208, 0.527);
+            border-radius: 12px;
+        }
+
+        .liked {
+            color: red;
+        }
+
+        #return {
+            width: 100px;
+            height: 30px;
+            background-color: rgba(40, 3, 48, 0.644);
+            color: #fff;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            box-shadow: 1px 3px 5px #ffffff63;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        /* responsive */
+        @media screen and (max-width: 970px) {
+            * {
+                box-sizing: border-box;
+                width: 100%;
+                height: auto;
+            }
+
+            section {
+                padding-left: 4em;
+                padding-right: 4em;
+                z-index: 5;
+                position: absolute;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <canvas></canvas>
+        <section>
+            <a href="../index.html"><i id="return" class="fa-solid fa-home"></i></a>
+            <h1 class="page-title">Web Development Tutorials Video</h1>
+            <div class="container-box">
+                <h1 class="post-title">Hamburger Menu</h1>
+                <p class="post-description">How to create Hamburger Button using HTML, CSS, JavaScript</p>
+                <iframe src="https://www.youtube.com/embed/5IOx0qXeEjk"
+                    title="Create Hamburger Button using HTML, CSS &amp; JavaScript" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                <code>#ZED<br>
+                #HTML, CSS, JavaScript<br>
+                #Hamburger Menu<br>
+                #Web Creation<br>
+                #Web Design
+                #JavaScript Reaction<br>
+                #Sharing</code>
+                <div class="button-container">
+                    <i class="fa-solid fa-heart" id="heart"></i>
+                    <i class="fa-solid fa-comment" id="comment"></i>
+                    <i class="fa-solid fa-share-from-square" id="share"></i>
+                </div>
+            </div>
+
+            <div class="container-box">
+                <h1 class="post-title">Toggle Switch</h1>
+                <p class="post-description">How to create Toggle Switch using HTML, CSS, JavaScript</p>
+                <iframe src="https://www.youtube.com/embed/iq6i7Vm3T_Y"
+                    title="How to create Toggle Switch using HTML CSS Javascript" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                <code>#ZED<br>
+                #HTML, CSS, JavaScript<br>
+                #Toggle Switch<br>
+                #Web Creation<br>
+                #Web Design
+                #JavaScript Reaction<br>
+                #Sharing</code>
+                <div class="button-container">
+                    <i class="fa-solid fa-heart" id="heart"></i>
+                    <i class="fa-solid fa-comment" id="comment"></i>
+                    <i class="fa-solid fa-share-from-square" id="share"></i>
+                </div>
+            </div>
+
+            <div class="container-box">
+                <h1 class="post-title">Mobile Nav Bar</h1>
+                <p class="post-description">How to create Navigation Bar for Mobile using HTML, CSS, JavaScript</p>
+                <iframe src="https://www.youtube.com/embed/tlmau9f-8WU"
+                    title="How to create Navigation Bar for Mobile using HTML CSS JS" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                <code>#ZED<br>
+                #HTML, CSS, JavaScript<br>
+                #Navigation for Mobile<br>
+                #Web Creation<br>
+                #Web Design
+                #JavaScript Reaction<br>
+                #Sharing</code>
+                <div class="button-container">
+                    <i class="fa-solid fa-heart" id="heart"></i>
+                    <i class="fa-solid fa-comment" id="comment"></i>
+                    <i class="fa-solid fa-share-from-square" id="share"></i>
+                </div>
+            </div>
+
+            <div class="container-box">
+                <h1 class="post-title">HTML & CSS Playground</h1>
+                <p class="post-description">How to create HTML & CSS Playground using HTML, CSS, JavaScript</p>
+                <iframe src="https://www.youtube.com/embed/ias7cLvTC9o"
+                    title="How to create HTML &amp; CSS Playground easily!" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                <code>#ZED<br>
+                #HTML, CSS, JavaScript<br>
+                #Playground<br>
+                #Web Creation<br>
+                #Web Design
+                #JavaScript Reaction<br>
+                #Sharing</code>
+                <div class="button-container">
+                    <i class="fa-solid fa-heart" id="heart"></i>
+                    <i class="fa-solid fa-comment" id="comment"></i>
+                    <i class="fa-solid fa-share-from-square" id="share"></i>
+                </div>
+            </div>
+
+
+            <div class="container-box">
+                <h1 class="post-title">Navigation Top Bar</h1>
+                <p class="post-description">How to create Navigation Top Bar for Webpage using HTML, CSS, JavaScript</p>
+                <iframe src="https://www.youtube.com/embed/Vyumo7NPi0I" title="How to create Navigation Top Bar"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                <code>#ZED<br>
+                #HTML, CSS, JavaScript<br>
+                #TopBar<br>
+                #Web Creation<br>
+                #Web Design
+                #JavaScript Reaction<br>
+                #Sharing</code>
+                <div class="button-container">
+                    <i class="fa-solid fa-heart" id="heart"></i>
+                    <i class="fa-solid fa-comment" id="comment"></i>
+                    <i class="fa-solid fa-share-from-square" id="share"></i>
+                </div>
+            </div>
+
+
+            <div class="container-box">
+                <h1 class="post-title">Getting Input Value</h1>
+                <p class="post-description">How to get input value using HTML, CSS, JavaScript</p>
+                <iframe src="https://www.youtube.com/embed/3iF6j3vqg3g"
+                    title="How to get Value of Range using Javascript in Web" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                <code>#ZED<br>
+                #HTML, CSS, JavaScript<br>
+                #Input (Script)<br>
+                #Web Creation<br>
+                #Web Design
+                #JavaScript Reaction<br>
+                #Sharing</code>
+                <div class="button-container">
+                    <i class="fa-solid fa-heart" id="heart"></i>
+                    <i class="fa-solid fa-comment" id="comment"></i>
+                    <i class="fa-solid fa-share-from-square" id="share"></i>
+                </div>
+            </div>
+
+            <div class="container-box">
+                <h1 class="post-title">Change Color using Input</h1>
+                <p class="post-description">How to change BG Color by typing in input using HTML, CSS, JavaScript</p>
+                <iframe width="640" height="360" src="https://www.youtube.com/embed/IyZdRWZlQVI"
+                    title="How to make Model Background Color using Input" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                <code>#ZED<br>
+                #HTML, CSS, JavaScript<br>
+                #Input (Script)<br>
+                #Web Creation<br>
+                #Web Design
+                #JavaScript Reaction<br>
+                #Sharing</code>
+                <div class="button-container">
+                    <i class="fa-solid fa-heart" id="heart"></i>
+                    <i class="fa-solid fa-comment" id="comment"></i>
+                    <i class="fa-solid fa-share-from-square" id="share"></i>
+                </div>
+            </div>
+
+
+
+
+
+
+        </section>
+    </div>
+    <script>
+        const hearts = document.querySelectorAll("#heart");
+
+        for (var i = 0; i < hearts.length; i++) {
+
+            hearts[i].addEventListener("click", function () {
+                this.className += " liked";
+            })
+        }
+
+    </script>
+
+
+    <script type="text/JavaScript">
+        //canvas script
+        let canvas = document.querySelector('canvas');
+        canvas.style.cssText = 'top: 0; position: fixed; z-index: 0';
+
+        canvas.width = w = window.innerWidth;
+        canvas.height = h = window.innerHeight;
+
+        let c = canvas.getContext('2d');
+
+
+        let mouse = {
+            x: undefined,
+            y: undefined
+        }
+
+        const colorArrays = [
+            'red',
+            'green',
+            'blue'
+        ]
+
+        //resize 
+        window.addEventListener('resize', (e) => {
+            canvas.width = w = window.innerWidth;
+            canvas.height = h = window.innerHeight;
+        })
+
+        function randomColor() {
+            return colorArrays[Math.floor(Math.random() * colorArrays.length)]
+        }
+
+        class Particle {
+            constructor(x, y, radius, color, velocity) {
+                this.x = x;
+                this.y = y;
+                this.radius = radius;
+                this.color = color;
+                this.velocity = velocity;
+            }
+
+            draw() {
+                c.beginPath();
+                c.arc(this.x, this.y, this.radius, 0, Math.PI, false);
+                c.fillStyle = this.color;
+                c.fill()
+            }
+
+            update() {
+
+                let speed = 2.5;
+                
+                this.x += this.velocity.x * speed;
+                this.y += this.velocity.y * speed;
+
+                this.velocity.y += 0.005;
+
+                this.draw()
+            }
+        }
+
+        let particles;
+        function init() {
+            particles = []
+        }
+
+        let particleCount = 150;
+
+        window.addEventListener('click', (e) => {
+            mouse.x = e.clientX;
+            mouse.y = e.clientY;
+
+            for(var i = 0; i < particleCount; i++) {
+                let x = mouse.x;
+                let y = mouse.y;
+                let radius = (Math.random() * 0.5) + 1;
+                let color = randomColor();
+                let radians = (Math.PI * 2) / particleCount;
+                let velocity = {
+                    x: Math.cos(radians * i) * Math.random() ,
+                    y: Math.sin(radians * i) * Math.random() 
+                }
+
+                particles.push(new Particle(x, y, radius, color, velocity));
+            }
+
+
+        })
+
+        function animate() {
+            requestAnimationFrame(animate);
+            c.fillStyle = 'rgba(0, 0, 0, 0.1)'
+            c.fillRect(0, 0, w, h);
+
+            particles.forEach(particle => {
+                particle.update();
+            })
+        }
+
+
+        init();
+        animate();
+    </script>
+</body>
+
+</html>

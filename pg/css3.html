@@ -1,0 +1,1836 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 Fundamental</title>
+    <link type="text/css" rel="stylesheet" href="../../fontawesome/css/all.min.css">
+</head>
+
+<body>
+    <a href="../index.html"><button class="return"><i class="fa-solid fa-home fa-2x"></i>Home</button></a>
+    <div class="wrapper">
+        <h2 class="title">CSS3 Fundamental</h2>
+        <div class="side-bar">
+            <details>
+                <summary class="key-heading">Layout</summary>
+                <div id="dropdown" class="dropdown-items">
+                    <a href="#display">Display</a>
+                    <a href="#flex-properties">Flex</a>
+                    <a href="#justify-content">Justify-content</a>
+                    <a href="#padding">Padding and text align</a>
+                    <a href="#margin">Margin</a>
+                </div>
+            </details>
+            <details>
+                <summary href="#color" class="key-heading">Color</summary>
+                <div id="dropdown" class="dropdown-items">
+                    <a href="#c-pattern">Color-Patterns</a>
+                    <a href="#c-extractor">Color-Extractor</a>
+                    <a href="#color-gradient">Color gradient</a>
+                </div>
+            </details>
+            <details>
+                <summary href="#block" class="key-heading">Block</summary>
+                <div id="dropdown" class="dropdown-items">
+                    <a href="#button">Button</a>
+                    <a href="#cursor">Cursor</a>
+                    <a href="#div-extractor">DIV Extractor</a>
+                </div>
+            </details>
+
+        </div>
+
+        <!-------Section--------->
+        <section>
+
+
+            <!------------------ Layout Group -------------------->
+
+            <div id="layout">
+                <h1 class="group-heading">Layout</h1>
+                <div class="main" id="display">
+                    <h4>Display Properties</h4>
+                    <p>Click below buttons and get your code form text box.</p>
+                    <div class="controllers">
+                        <button onclick="flex_center()">Flex Center</button>
+                        <button onclick="flex_start()">Flex Start</button>
+                        <button onclick="flex_row()">Flex Row</button>
+                        <button onclick="flex_column()">Flex Column</button>
+                        <button onclick="row_reverse()">Row Reverse</button>
+                        <button onclick="column_reverse()">Column Reverse</button>
+                    </div>
+                    <textarea class="display-code-display"></textarea>
+                    <div class="model-box-container-display">
+                        <div class="display-model-box">1</div>
+                        <div class="display-model-box">2</div>
+                        <div class="display-model-box">3</div>
+                        <div class="display-model-box">4</div>
+
+                    </div>
+                    <div class="model-box-container-flex">
+                        <h4 id="flex-properties">Flex-Properties (Flex-Wrap)</h4>
+                        <h6>When the containers' width doesn't fit the items, the flex properties is useful for display
+                            items. In these examples, the containers' width is 50% on hover and it effects to the
+                            properties of nowrap, wrap, wrap-reverse!</h6>
+                        <h6>Flex-wrap: nowrap;</h6>
+                        <div class="flex-no-wrap">
+                            <div class="display-model-box">1</div>
+                            <div class="display-model-box">2</div>
+                            <div class="display-model-box">3</div>
+                            <div class="display-model-box">4</div>
+                        </div>
+                        <h6>Flex-wrap: wrap;</h6>
+                        <div class="flex-wrap">
+                            <div class="display-model-box">1</div>
+                            <div class="display-model-box">2</div>
+                            <div class="display-model-box">3</div>
+                            <div class="display-model-box">4</div>
+                        </div>
+                        <h6>Flex-wrap: wrap-reverse</h6>
+                        <div class="flex-wrap-reverse">
+                            <div class="display-model-box">1</div>
+                            <div class="display-model-box">2</div>
+                            <div class="display-model-box">3</div>
+                            <div class="display-model-box">4</div>
+                        </div>
+                    </div>
+                    <h4 id="justify-content">Justify-Content</h4>
+                    <h6>Justify-Content: space-around</h6>
+                    <div class="justify-space-around">
+                        <div class="display-model-box">1</div>
+                        <div class="display-model-box">2</div>
+                        <div class="display-model-box">3</div>
+                        <div class="display-model-box">4</div>
+                    </div>
+                    <h6>Justify-Content: space-between</h6>
+                    <div class="justify-space-between">
+                        <div class="display-model-box">1</div>
+                        <div class="display-model-box">2</div>
+                        <div class="display-model-box">3</div>
+                        <div class="display-model-box">4</div>
+                    </div>
+                    <h6>Justify-Content: space-evenly</h6>
+                    <div class="justify-space-evenly">
+                        <div class="display-model-box">1</div>
+                        <div class="display-model-box">2</div>
+                        <div class="display-model-box">3</div>
+                        <div class="display-model-box">4</div>
+                    </div>
+                </div>
+
+                <div class="main" id="padding">
+                    <h4>Padding & Text Align</h4>
+                    <p>Here are some padding example for you! click below button and change padding pixle</p>
+                    <div class="controllers">
+                        <button onclick="pad12px()">Padding 12px</button>
+                        <button onclick="pad22px()">Padding 22px</button>
+                        <button onclick="pad35px()">Padding 35px</button>
+                        <button onclick="pad40px()">Padding 40px</button>
+                        <button onclick="alignleft()">Left</button>
+                        <button onclick="alignright()">Right</button>
+                        <button onclick="aligncenter()">Center</button>
+
+                    </div>
+                    <textarea class="padding-code"></textarea>
+                    <div class="model-box-container">
+                        <div class="padding-model">Some example texts! We are providing some CSS basic lesson. Hope you
+                            make us feel happy! Thanks!</div>
+                    </div>
+                </div>
+
+                <div id="margin" class="main">
+                    <h4 id="margin">Margin</h4>
+                    <p>Here are some margin example for you!</p>
+                    <div class="controllers dsp-column">
+                        <div class="mg-ranges">
+                            <span>Margin Top</span><input type="range" class="mg-top" max="100" min="0">
+                        </div>
+                        <div class="mg-ranges">
+                            <span>Margin Bottom</span><input type="range" class="mg-btm" max="100" min="0">
+                        </div>
+                        <div class="mg-ranges">
+                            <span>Margin Left</span><input type="range" class="mg-left" max="400" min="0">
+                        </div>
+
+                    </div>
+                    <textarea class="mg-code"></textarea>
+                    <div class="model-box-container">
+                        <div class="mg-model-box-container">
+                            <div class="mg-model-box"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!------------------ Color Group -------------------->
+            <div id="color">
+                <h1 class="group-heading">Color</h1>
+                <div class="main">
+                    <h4 id="c-pattern">Color Patterns</h4>
+                    <p>Here are some color example for you!</p>
+                    <div class="controllers">
+                        <div class="color1" onclick='red()'></div>
+                        <div class="color2" onclick='blue()'></div>
+                        <div class="color3" onclick='yellow()'></div>
+                        <div class="color4" onclick='purple()'></div>
+                        <div class="color5" onclick='aqua()'></div>
+                        <div class="color6" onclick='skyblue()'></div>
+                        <div class="color7" onclick='lightgreen()'></div>
+                        <div class="color8" onclick='oldlace()'></div>
+                        <div class="color9" onclick='aquamarine()'></div>
+                        <div class="color10" onclick='chocolate()'></div>
+                        <div class="color11" onclick='chartreuse()'></div>
+                        <div class="color12" onclick='aliceblue()'></div>
+                        <div class="color13" onclick='bisque()'></div>
+                        <div class="color14" onclick='crimson()'></div>
+                        <div class="color15" onclick='cyan()'></div>
+                        <div class="color16" onclick='blueviolet()'></div>
+                        <div class="color17" onclick='brown()'></div>
+                        <div class="color18" onclick='blanchedalmond()'></div>
+                        <div class="color19" onclick='rebeccapurple()'></div>
+                        <div class="color20" onclick='royalblue()'></div>
+                        <div class="color21" onclick='violet()'></div>
+                        <div class="color22" onclick='teal()'></div>
+                        <div class="color23" onclick='thistle()'></div>
+                        <div class="color24" onclick='turquoise()'></div>
+                        <div class="color25" onclick='olivedrab()'></div>
+                        <div class="color26" onclick='orange()'></div>
+                        <div class="color27" onclick='orchid()'></div>
+                        <div class="color28" onclick='orangered()'></div>
+                        <div class="color29" onclick='palegoldenrod()'></div>
+                        <div class="color30" onclick='palegreen()'></div>
+                        <div class="color31" onclick='paleturquoise()'></div>
+                        <div class="color32" onclick='palevioletred()'></div>
+                        <div class="color33" onclick='papayawhip()'></div>
+                        <div class="color34" onclick='peachpuff()'></div>
+                        <div class="color35" onclick='peru()'></div>
+                        <div class="color36" onclick='pink()'></div>
+                        <div class="color37" onclick='plum()'></div>
+                        <div class="color38" onclick='powderblue()'></div>
+                    </div>
+
+                    <textarea class="color-code"></textarea>
+                    <div class="model-box-container">
+                        <div class="color-model"></div>
+                    </div>
+
+                    <div class="main" id="c-extractor">
+                        <h4>Color Extractor</h4>
+                        <p>Pick your color by scrolling the range RGB</p>
+                        <div class="controllers dsp-column">
+                            <div>
+                                <label for="r">R</label>
+                                <input type="range" max="225" min="0" class="redc">
+                            </div>
+                            <div>
+                                <label for="g">G</label>
+                                <input type="range" max="225" min="0" class="greenc">
+                            </div>
+                            <div>
+                                <label for="b">B</label>
+                                <input type="range" max="225" min="0" class="bluec">
+                            </div>
+                            <div>
+                                <label for="alpha">Alpha</label>
+                                <input type="range" max="100" min="0" class="alpha" value="50">
+                            </div>
+                        </div>
+                        <textarea class="c-ext-code"></textarea>
+                        <div class="model-box-container">
+                            <div class="color-ext-model-box"></div>
+
+                        </div>
+                    </div>
+
+                    <div class="main" id="gradient">
+                        <h4 id="color-gradient">Gradient Color</h4>
+                        <p>Gradient Color is much more cool design for your web pages</p>
+                        <div class="controllers">
+                            <label for="g-start">Start</label>
+                            <input type="color" value="#00eab1" class="g-start">
+                            <label for="g-mid">Mid</label>
+                            <input type="color" value="#af0479" class="g-mid">
+                            <label for="g-end">End</label>
+                            <input type="color" value="#154C1D" class="g-end">
+                            <pre>
+                            <button onclick="left_to_right()">Left to right</button>
+                            <button onclick="right_to_left()">Right to left</button>
+                            <button onclick="top_to_bottom()">Top to Bottom</button>
+                            <button onclick="bottom_to_top()">Bottom to Top</button>
+                            <button onclick="to_topleft()">Top Left</button>
+                            <button onclick="to_topright()">Top Right</button>
+                            <button onclick="to_bottomright()">Bottom Right</button>
+                            <button onclick="to_bottomleft()">Bottom Left</button>
+                            </pre>
+                        </div>
+                        <textarea class="gradient-code"></textarea>
+                        <div class="model-box-container">
+                            <div class="gradient-model-box"></div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div id="block">
+                <h1 class="group-heading">Block</h1>
+                <div class="main" id="button">
+                    <h4>Button</h4>
+                    <p>Here are some simple button example for you!</p>
+                    <div class="controllers">
+
+
+                    </div>
+                    <pre class="height-limit button-code" style="padding-right: 120px">
+                        .btn1 {
+                            width: 100px;
+                            height: 30px;
+                            border-radius: 0;
+                            background: linear-gradient(to right, #978cfd, #020a75a8);
+                            color: white;
+                        }
+                
+                        .btn1:hover {
+                            transition: 0.5s;
+                            border-radius: 12px;
+                            font-size: var(--font-medium);
+                        }
+                
+                        .btn2 {
+                            width: 100px;
+                            height: 30px;
+                            border-top-right-radius: 0px;
+                            border-bottom-left-radius: 0px;
+                            color: white;
+                        }
+                
+                        .btn3 {
+                            width: 100px;
+                            height: 30px;
+                            border-top-right-radius: 0px;
+                            color: white;
+                            background-color: transparent;
+                            box-shadow: 1px 2px 3px crimson;
+                        }
+                
+                        .btn4 {
+                            width: 100px;
+                            height: 30px;
+                            background: transparent;
+                            color: white;
+                            border: 1px solid pink;
+                        }
+                
+                        .btn5 {
+                            width: 100px;
+                            height: 30px;
+                            border-bottom-left-radius: 0px;
+                            background-color: transparent;
+                            border: 1px dotted chartreuse;
+                            color: var(--pure-white);
+                        }
+                
+                        .btn6 {
+                            width: 100px;
+                            height: 30px;
+                            background-color: transparent;
+                            border: 1px dashed chartreuse;
+                            color: var(--pure-white);
+                        }
+                
+                        .btn7 {
+                            width: 100px;
+                            height: 30px;
+                            background-color: transparent;
+                            border: 1px groove rgb(0, 140, 255);
+                            color: var(--pure-white);
+                        }
+                
+                        .btn8 {
+                            width: 100px;
+                            height: 30px;
+                            background-color: transparent;
+                            border-top: 1px groove rgb(0, 140, 255);
+                            border-bottom: 1px groove rgb(0, 140, 255);
+                            color: var(--pure-white);
+                        }
+                
+                        .btn9 {
+                            width: 100px;
+                            height: 30px;
+                            background-color: transparent;
+                            border-top-right-radius: 0px;
+                            border-bottom-left-radius: 0px;
+                            border-left: 1px groove rgb(0, 140, 255);
+                            border-right: 1px groove rgb(0, 140, 255);
+                            color: var(--pure-white);
+                        }
+                
+                        .btn10 {
+                            width: 100px;
+                            height: 30px;
+                            background-color: transparent;
+                            border-radius: 4px;
+                            border-left: 1px groove rgb(0, 140, 255);
+                            border-right: 1px groove rgb(0, 140, 255);
+                            border-top: 1px solid pink;
+                            color: var(--pure-white);
+                        }
+                
+                    </pre>
+                    <div class="model-box-container">
+                        <button class="btn1">Hello</button>
+                        <button class="btn2">Hello</button>
+                        <button class="btn3">Hello</button>
+                        <button class="btn4">Hello</button>
+                        <button class="btn5">Hello</button>
+                        <button class="btn6">Hello</button>
+                        <button class="btn7">Hello</button>
+                        <button class="btn8">Hello</button>
+                        <button class="btn9">Hello</button>
+                        <button class="btn10">Hello</button>
+                    </div>
+                </div>
+
+                <div class="main fade-in" id="cursor">
+                    <h4>Cursor</h4>
+                    <p>Hover on below blocks, It will changed cursor types!</p>
+                    <div class="controllers">
+
+                    </div>
+                    <div class="model-box-container fade-in">
+                        <div id="cur" class="copy">cursor: copy</div>
+                        <div id="cur" class="crosshair">cursor: crosshair</div>
+                        <div id="cur" class="pointer">cursor: pointer</div>
+                        <div id="cur" class="grabbing">cursor: grabbing</div>
+                        <div id="cur" class="help">cursor: help</div>
+                        <div id="cur" class="move">cursor: move</div>
+                        <div id="cur" class="progress">cursor: progress</div>
+                        <div id="cur" class="not-allowed">cursor: not-allowed</div>
+                        <div id="cur" class="none">cursor: none</div>
+                        <div id="cur" class="text">cursor: text</div>
+                        <div id="cur" class="s-resize">cursor: -resize</div>
+                        <div id="cur" class="sw-resize">cursor: sw-resize</div>
+                        <div id="cur" class="col-resize">cursor: col-resize</div>
+                        <div id="cur" class="row-resize">cursor: row-resize</div>
+                        <div id="cur" class="custom-cursor">custom-cursor: url(eg.jpg)</div>
+                    </div>
+                </div>
+
+                <div class="main fade-in" id="div-extractor">
+                    <h4>DIV Extractor</h4>
+                    <p>Customize your div for web pages</p>
+                    <div class="controllers dis-column">
+                        <div class="dis-column percent-50">
+                            <div>
+                                <label for="">Width</label>
+                                <input type="range" max="200" min="0" value="50" class="div-width">
+                            </div>
+                            <div>
+                                <label for="">Height</label>
+                                <input type="range" max="200" min="0" value="50" class="div-height">
+                            </div>
+                            <div>
+                                <label for="">Background Color</label>
+                                <input type="color" value="#ff5ddd" class="div-bg-color">
+                            </div>
+
+                            <div>
+                                <label for="">Bdr Size</label>
+                                <input type="range" max="100" min="0" value="5" class="div-border-size">
+                            </div>
+                            <div>
+                                <label for="">Color</label>
+                                <input type="color" value="#148acd" class="div-border-color">
+                            </div>
+                        </div>
+                        <div class="dis-column percent-50">
+                            <div>
+                                <label for="">Radius</label>
+                                <input type="range" max="100" min="0" value="0" class="div-radius">
+                            </div>
+                            <div>
+                                <label for="">X-Position</label>
+                                <input type="range" max="200" min="-200" value="0" class="x-post">
+
+                            </div>
+                            <div>
+                                <label for="">Y-Position</label>
+                                <input type="range" max="200" min="-200" value="0" class="y-post">
+                            </div>
+                            <div>
+                                <label for="">Blur</label>
+                                <input type="range" max="200" min="0" value="0" class="div-blur">
+                            </div>
+                            <div>
+                                <label for="">Box-Shadow</label>
+                                <input type="color" value="#00147a" class="sh-color">
+                            </div>
+
+                        </div>
+                    </div>
+                    <textarea class="div-ext-code"></textarea>
+                    <div class="model-box-container dsp-center" style="height: 300px">
+                        <div class="div-ext-model-box"></div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </section>
+    </div>
+
+
+    <script type="text/JavaScript">
+        //Fate in animation
+        function fadein() {
+            var fadeins = document.querySelectorAll(".fade-in");
+        
+            for (var i = 0; i < fadeins.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = fadeins[i].getBoundingClientRect().top;
+            var elementVisible = 150;
+        
+            if (elementTop < windowHeight - elementVisible) {
+                fadeins[i].classList.add("active");
+            } else {
+                fadeins[i].classList.remove("active");
+            }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Carter+One&family=Cinzel:wght@500&family=Lexend+Deca:wght@300&family=Luckiest+Guy&family=Poppins:wght@300&family=Rouge+Script&family=Yanone+Kaffeesatz&display=swap');
+
+        /* Variables */
+
+
+
+        .dsp-column {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .dsp-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .dsp-center {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .percent-50 {
+            width: 50%;
+        }
+
+        .height-limit {
+            width: 300px;
+        }
+
+        html::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        html::-webkit-scrollbar-button {
+            width: 5px;
+            background-color: rgba(17, 10, 48, 0.801);
+            color: white;
+        }
+
+        html::-webkit-scrollbar-thumb {
+            width: 4px;
+            background-color: rgba(187, 19, 19, 0.555);
+            color: white;
+            border-radius: 50px;
+        }
+
+        html::-webkit-scrollbar-corner {
+            height: 0px;
+        }
+
+        .fadein.active {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+
+
+        :root {
+            --main-title-font-style: 'Archivo Black';
+            --sub-title-font-style: 'Carter One';
+            --primary-font-style: 'Poppins';
+            --handwriting: 'Rouge Script';
+            --link-font-style: 'Lexend Deca';
+            --square-font-style: 'Yanone Kaffeesatz';
+            --code: 'Arial';
+
+            /* main colors */
+            --blog-primary-color: rgb(0, 16, 34);
+            --blog-active-bg-color: #00758a;
+            --hover-color: #06ffff;
+            --primary-text-color: rgba(255, 255, 255, 0.678);
+            --pure-white: #ffffff;
+            --black: #000000;
+            --gray: gray;
+
+
+            /* font-size */
+            --font-max: 23pt;
+            --font-huge: 16pt;
+            --font-large: 13pt;
+            --font-medium: 11pt;
+            --font-small: 9pt;
+            --font-min: 7pt;
+
+
+        }
+
+        h6 {
+            font-family: Poppins;
+            color: white;
+            font-weight: normal;
+            padding: 1em 2em 1em 2em;
+            text-align: justify;
+        }
+
+        section {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100%;
+            background-color: var(--blog-primary-color);
+        }
+
+
+        .wrapper {
+            width: 70%;
+            margin-left: 15%;
+            margin-right: 15%;
+        }
+
+        .wrapper .title {
+            font-family: var(--sub-title-font-style);
+            font-size: var(--font-medium);
+            font-weight: normal;
+            color: rgba(209, 1, 1, 0.884);
+            margin-left: 0;
+            position: fixed;
+            top: 80px;
+            z-index: 5;
+        }
+
+
+        .return {
+            z-index: 4;
+            background-color: var(--blog-primary-color);
+            color: var(--pure-white);
+            font-family: var(--primary-font-style);
+            width: 140px;
+            height: 30px;
+            position: fixed;
+            top: 20px;
+            left: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid rgba(220, 20, 60, 0.521);
+            box-shadow: 1px 2px 3px rgba(194, 2, 2, 0.637);
+        }
+
+        .return i {
+            margin-right: 0.5rem;
+            transform: translateY(-5px);
+        }
+
+        .return:hover>i {
+            transition: 0.2s;
+            color: rgba(228, 9, 9, 0.336);
+        }
+
+        .side-bar {
+            width: 150px;
+            background-color: rgba(247, 247, 247, 0.062);
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 15%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding-right: 12pt;
+            padding-top: 120px;
+            overflow: scroll;
+            box-shadow: 1px 4px 1px rgba(220, 20, 60, 0.158);
+        }
+
+        .side-bar::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .side-bar::-webkit-scrollbar-button {
+            width: 5px;
+            background-color: rgba(201, 23, 23, 0.411);
+            color: white;
+        }
+
+        .side-bar::-webkit-scrollbar-thumb {
+            width: 4px;
+            background-color: rgba(167, 18, 18, 0.432);
+            color: white;
+        }
+
+
+
+        section {
+            margin-left: 25%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .group-heading {
+            width: 100%;
+            height: auto;
+            color: var(--pure-white);
+            font-family: var(--primary-font-style);
+            text-transform: uppercase;
+            text-align: center;
+            margin-top: 2em;
+        }
+
+        .main {
+            width: 100%;
+            height: auto;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .dropdown-items {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 1em;
+        }
+
+        .dropdown-items a {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            font-family: var(--primary-font-style);
+            font-size: 7pt;
+            text-decoration: none;
+            transition: 0.5s;
+            padding: 4px 0px 4px 2em;
+            color: var(--primary-text-color);
+        }
+
+        .dropdown-items a:hover {
+            background-color: rgba(207, 2, 2, 0.445);
+            padding: 4px 0px 4px 2em;
+        }
+
+        details {
+            padding: 5px 5px 5px 12px;
+            text-align: left;
+            cursor: default;
+            font-family: var(--primary-font-style);
+            font-size: var(--font-small);
+            user-select: none;
+        }
+
+        summary {
+            border: none;
+            user-select: none;
+            outline: none;
+            color: rgba(255, 145, 0, 0.822);
+            font-weight: bolder;
+        }
+
+
+        textarea,
+        pre {
+            width: 400px;
+            height: auto;
+            font-family: var(--code);
+            color: var(--primary-text-color);
+            padding: 1.5em;
+            font-size: 8pt;
+            margin: 5px;
+            outline: none;
+            border: none;
+            background-color: rgba(8, 8, 8, 0.486);
+            border-radius: 2px;
+            text-align: left;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        button {
+            width: 100px;
+            height: 25px;
+            border-radius: 12px;
+            border: none;
+            outline: none;
+            margin: 2px;
+            background-color: var(--gray);
+            color: var(--blog-primary-color);
+            font-family: var(--link-font-style);
+            font-size: 9pt;
+        }
+
+
+        .main h4 {
+            font-family: var(--sub-title-font-style);
+            font-weight: normal;
+            color: white;
+            margin: 12pt 2px 12pt 2px;
+        }
+
+        .main p {
+            font-family: var(--primary-font-style);
+            font-size: 9pt;
+            margin: 0pt 2px 12pt 2px;
+            color: var(--primary-text-color);
+        }
+
+
+        .controllers {
+            width: 95%;
+            height: auto;
+            margin: 0px 2px 12px 2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .model-box-container-display {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            width: 500px;
+            height: 300px;
+            box-shadow: 1px 5px 15px rgba(190, 15, 15, 0.445);
+            margin-top: 1em;
+            border-radius: 15px;
+        }
+
+        .display-model-box {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-text-color);
+            margin: 12px;
+            transition: 0.5s;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: var(--primary-font-style);
+            font-size: var(--font-max);
+        }
+
+        .model-box-container-flex {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            height: 680px;
+
+        }
+
+        .flex-no-wrap,
+        .flex-wrap,
+        .flex-wrap-reverse
+         {
+            display: flex;
+            cursor: pointer;
+            background-color: rgba(225, 225, 225, 0.281);
+            height: 200px;
+            width: 70%;
+            position: relative;
+            border-radius: 14px;
+        }
+
+        .justify-space-around,
+        .justify-space-between,
+        .justify-space-evenly {
+            display: flex;
+            cursor: pointer;
+            background-color: rgba(225, 225, 225, 0.281);
+            width: 100%;
+            position: relative;
+            border-radius: 14px;
+        }
+
+        .flex-no-wrap:hover {
+            width: 30%;
+            flex-wrap: nowrap;
+            transition: 0.5s;
+        }
+
+        .flex-wrap:hover {
+            width: 30%;
+            flex-wrap: wrap;
+            transition: 0.5s;
+        }
+
+        .flex-wrap-reverse:hover {
+            width: 30%;
+            flex-wrap: wrap-reverse;
+            transition: 0.5s
+        }
+
+        .justify-space-around:hover {
+            justify-content: space-around;
+            transition: 0.5s
+
+        }
+        .justify-space-between:hover {
+            justify-content: space-between;
+            transition: 0.5s
+
+        }
+        .justify-space-evenly:hover {
+            justify-content: space-evenly;
+            transition: 0.5s
+
+        }
+
+        /*--------- flex ------end ------- */
+
+        .model-box-container {
+            /* Common */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            width: 500px;
+            height: auto;
+            box-shadow: 1px 5px 15px rgba(170, 12, 12, 0.425);
+            margin-top: 1em;
+            border-radius: 15px;
+        }
+
+
+        .padding-model {
+            width: 100%;
+            height: 200px;
+            background-color: transparent;
+            font-family: var(--primary-font-style);
+            color: var(--primary-text-color)
+        }
+
+        .mg-ranges {
+            width: 100%;
+            height: 30px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .mg-ranges span {
+            margin-right: 12px;
+            color: white;
+            font-family: var(--primary-font-style);
+            font-size: var(--font-small);
+        }
+
+        .mg-ranges input {
+            fill: black;
+        }
+
+        .color1,
+        .color2,
+        .color3,
+        .color4,
+        .color5,
+        .color6,
+        .color7,
+        .color8,
+        .color9,
+        .color10,
+        .color11,
+        .color12,
+        .color13,
+        .color14,
+        .color15,
+        .color16,
+        .color17,
+        .color18,
+        .color19,
+        .color20,
+        .color21,
+        .color22,
+        .color23,
+        .color24,
+        .color25,
+        .color26,
+        .color27,
+        .color28,
+        .color29,
+        .color30,
+        .color31,
+        .color32,
+        .color33,
+        .color34,
+        .color35 {
+            width: 40px;
+            height: 40px;
+            margin: 2px;
+        }
+
+        .color1 {
+            background-color: red;
+        }
+
+        .color2 {
+            background-color: blue;
+        }
+
+        .color3 {
+            background-color: yellow;
+        }
+
+        .color4 {
+            background-color: purple;
+        }
+
+        .color5 {
+            background-color: aqua;
+        }
+
+        .color6 {
+            background-color: skyblue;
+        }
+
+        .color7 {
+            background-color: lightgreen;
+        }
+
+        .color8 {
+            background-color: oldlace;
+        }
+
+        .color9 {
+            background-color: aquamarine;
+        }
+
+        .color10 {
+            background-color: chocolate
+        }
+
+        .color11 {
+            background-color: chartreuse
+        }
+
+        .color12 {
+            background-color: aliceblue;
+        }
+
+        .color13 {
+            background-color: bisque;
+        }
+
+        .color14 {
+            background-color: crimson
+        }
+
+        .color15 {
+            background-color: cyan
+        }
+
+        .color16 {
+            background-color: blueviolet;
+        }
+
+        .color17 {
+            background-color: brown
+        }
+
+        .color18 {
+            background-color: blanchedalmond
+        }
+
+        .color19 {
+            background-color: rebeccapurple
+        }
+
+        .color20 {
+            background-color: royalblue
+        }
+
+        .color21 {
+            background-color: violet
+        }
+
+        .color22 {
+            background-color: teal
+        }
+
+        .color23 {
+            background-color: thistle
+        }
+
+        .color24 {
+            background-color: turquoise
+        }
+
+        .color25 {
+            background-color: olivedrab
+        }
+
+        .color26 {
+            background-color: orange
+        }
+
+        .color27 {
+            background-color: orchid
+        }
+
+        .color28 {
+            background-color: orangered
+        }
+
+        .color29 {
+            background-color: palegoldenrod
+        }
+
+        .color30 {
+            background-color: palegreen
+        }
+
+        .color31 {
+            background-color: paleturquoise
+        }
+
+        .color32 {
+            background-color: palevioletred
+        }
+
+        .color33 {
+            background-color: papayawhip
+        }
+
+        .color34 {
+            background-color: peachpuff
+        }
+
+        .color35 {
+            background-color: peru
+        }
+
+        .color36 {
+            background-color: pink
+        }
+
+        .color37 {
+            background-color: plum
+        }
+
+        .color38 {
+            background-color: powderblue
+        }
+
+
+
+
+        .color-model {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(0, 14, 214);
+        }
+
+
+        .color-ext-model-box {
+            width: 80%;
+            height: 250px;
+            background-color: rgb(225, 225, 225);
+            border-radius: 13px;
+            box-shadow: 1px 3px 12px rgba(106, 5, 201, 0.322);
+        }
+
+        .controllers label {
+            color: var(--primary-text-color);
+            font-family: var(--primary-font-style);
+            font-size: var(--font-medium);
+            transform: translateY(-3px);
+            margin: 1rem 1rem 1rem 1rem;
+        }
+
+
+        #cur {
+            width: 100px;
+            height: 100px;
+            background-color: rgba(0, 85, 33, 0.404);
+            margin: 3px;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--primary-text-color);
+            font-family: var(--square-font-style);
+        }
+
+        .copy:hover {
+            cursor: copy;
+        }
+
+        .crosshair:hover {
+            cursor: crosshair;
+        }
+
+        .pointer:hover {
+            cursor: pointer;
+        }
+
+        .grabbing:hover {
+            cursor: grabbing;
+        }
+
+        .help:hover {
+            cursor: help;
+        }
+
+        .move:hover {
+            cursor: move;
+        }
+
+        .progress:hover {
+            cursor: progress;
+        }
+
+        .not-allowed:hover {
+            cursor: not-allowed;
+        }
+
+        .none:hover {
+            cursor: none;
+        }
+
+        .text:hover {
+            cursor: text;
+        }
+
+        .s-resize:hover {
+            cursor: s-resize;
+        }
+
+        .sw-resize:hover {
+            cursor: sw-resize;
+        }
+
+        .col-resize:hover {
+            cursor: col-resize;
+        }
+
+        .row-resize:hover {
+            cursor: row-resize;
+        }
+
+        .custom-cursor:hover {
+            cursor: url(../../img/logo.png), auto;
+        }
+
+        .gradient-model-box {
+            width: 90%;
+            height: 250px;
+            border-radius: 14px;
+            box-shadow: 1px 2px 3px #fff;
+        }
+
+        .btn1 {
+            width: 100px;
+            height: 30px;
+            border-radius: 0;
+            background: linear-gradient(to right, #978cfd, #020a75a8);
+            color: white;
+        }
+
+        .btn1:hover {
+            transition: 0.5s;
+            border-radius: 12px;
+            font-size: var(--font-medium);
+        }
+
+        .btn2 {
+            width: 100px;
+            height: 30px;
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+            color: white;
+        }
+
+        .btn3 {
+            width: 100px;
+            height: 30px;
+            border-top-right-radius: 0px;
+            color: white;
+            background-color: transparent;
+            box-shadow: 1px 2px 3px crimson;
+        }
+
+        .btn4 {
+            width: 100px;
+            height: 30px;
+            background: transparent;
+            color: white;
+            border: 1px solid pink;
+        }
+
+        .btn5 {
+            width: 100px;
+            height: 30px;
+            border-bottom-left-radius: 0px;
+            background-color: transparent;
+            border: 1px dotted chartreuse;
+            color: var(--pure-white);
+        }
+
+        .btn6 {
+            width: 100px;
+            height: 30px;
+            background-color: transparent;
+            border: 1px dashed chartreuse;
+            color: var(--pure-white);
+        }
+
+        .btn7 {
+            width: 100px;
+            height: 30px;
+            background-color: transparent;
+            border: 1px groove rgb(0, 140, 255);
+            color: var(--pure-white);
+        }
+
+        .btn8 {
+            width: 100px;
+            height: 30px;
+            background-color: transparent;
+            border-top: 1px groove rgb(0, 140, 255);
+            border-bottom: 1px groove rgb(0, 140, 255);
+            color: var(--pure-white);
+        }
+
+        .btn9 {
+            width: 100px;
+            height: 30px;
+            background-color: transparent;
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+            border-left: 1px groove rgb(0, 140, 255);
+            border-right: 1px groove rgb(0, 140, 255);
+            color: var(--pure-white);
+        }
+
+        .btn10 {
+            width: 100px;
+            height: 30px;
+            background-color: transparent;
+            border-radius: 4px;
+            border-left: 1px groove rgb(0, 140, 255);
+            border-right: 1px groove rgb(0, 140, 255);
+            border-top: 1px solid pink;
+            color: var(--pure-white);
+        }
+
+        .mg-model-box-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .mg-model-box {
+            width: 100px;
+            height: 100px;
+            background-color: rgba(255, 145, 0, 0.822);
+        }
+
+        .div-ext-model-box {
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+        }
+
+        /*Responsive Style */
+
+        @media screen and (max-width: 970px) {
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            .wrapper {
+                width: 100%;
+                margin: 0;
+                padding-top: 3em;
+            }
+
+            .side-bar {
+                left: 0;
+            }
+
+            section {
+                margin-left: 170px;
+            }
+
+            .controllers {
+                width: 80%;
+                height: auto;
+            }
+
+            .model-box-container-display,
+            .model-box-container {
+                width: 90%;
+                padding: 15px;
+            }
+
+        }
+    </style>
+    <script>
+        /* This is license to Rakkha Lin Maung */
+
+
+
+
+        var r = document.querySelector('.redc');
+        var g = document.querySelector('.greenc');
+        var b = document.querySelector('.bluec');
+        var a = document.querySelector('.alpha');
+        var cExtCode = document.querySelector('.c-ext-code');
+        var extBox = document.querySelector('.color-ext-model-box');
+
+
+
+
+        function flex_center() {
+            const display = document.querySelector('.model-box-container-display');
+            let display_input = document.querySelector('.display-code-display');
+            display.style.cssText = "align-items: center; justify-content: center";
+            display_input.value = 'display: flex; justify-content: center; align-items: center'
+            console.log("flex-center")
+        }
+
+
+        function flex_start() {
+            const display = document.querySelector('.model-box-container-display');
+            let display_input = document.querySelector('.display-code-display');
+            display.style.cssText = "align-items: flex-start; justify-content: flex-start";
+            display_input.value = 'align-items: flex-start; justify-content: flex-start'
+            console.log("flex-center")
+        }
+
+        function flex_row() {
+            const display = document.querySelector('.model-box-container-display');
+            let display_input = document.querySelector('.display-code-display');
+            display.style.cssText = "flex-direction: row";
+            display_input.value = 'flex-direction: row'
+            console.log("flex-center")
+        }
+
+        function flex_column() {
+            const display = document.querySelector('.model-box-container-display');
+            let display_input = document.querySelector('.display-code-display');
+            display.style.cssText = "flex-direction: column";
+            display_input.value = "flex-direction: column"
+            console.log("flex-center")
+        }
+
+        function row_reverse() {
+            const display = document.querySelector('.model-box-container-display');
+            let display_input = document.querySelector('.display-code-display');
+            display.style.cssText = "flex-direction: row-reverse";
+            display_input.value = "flex-direction: row-reverse"
+            console.log("flex-center")
+        }
+
+        function column_reverse() {
+            const display = document.querySelector('.model-box-container-display');
+            let display_input = document.querySelector('.display-code-display');
+            display.style.cssText = "flex-direction: column-reverse";
+            display_input.value = "flex-direction: column-reverse"
+            console.log("flex-center")
+        }
+
+
+
+        //Padding and text align
+        const paddingModel = document.querySelector('.padding-model');
+        const padCode = document.querySelector('.padding-code');
+
+        function pad12px() {
+            paddingModel.style.cssText = 'padding: 12px';
+            padCode.value = "padding: 12px;"
+        }
+
+        function pad22px() {
+            paddingModel.style.cssText = 'padding: 22px';
+            padCode.value = "padding: 22px;"
+        }
+
+        function pad35px() {
+            paddingModel.style.cssText = 'padding: 35px';
+            padCode.value = "padding: 35px;"
+        }
+
+        function pad40px() {
+            paddingModel.style.cssText = 'padding: 40px';
+            padCode.value = "padding: 40px;"
+        }
+
+        function alignleft() {
+            paddingModel.style.cssText += "text-align: left"
+            padCode.value = " align-item: left"
+        }
+
+        function alignright() {
+            paddingModel.style.cssText += "text-align: right"
+            padCode.value = " align-item: right"
+        }
+
+        function aligncenter() {
+            paddingModel.style.cssText += "text-align: center"
+            padCode.value = " align-item: center"
+        }
+
+        //Color Code
+
+        var colorModel = document.querySelector('.color-model');
+        var colorCode = document.querySelector('.color-code');
+
+        function red() {
+            colorModel.style.backgroundColor = "red";
+            colorCode.value = 'background-color: red';
+        }
+
+        function blue() {
+            colorModel.style.backgroundColor = "blue";
+            colorCode.value = 'background-color: blue';
+        }
+
+        function yellow() {
+            colorModel.style.backgroundColor = "yellow";
+            colorCode.value = 'background-color: yellow';
+        }
+
+        function purple() {
+            colorModel.style.backgroundColor = "purple";
+            colorCode.value = 'background-color: purple';
+        }
+
+        function aqua() {
+            colorModel.style.backgroundColor = "aqua";
+            colorCode.value = 'background-color: aqua';
+        }
+
+        function skyblue() {
+            colorModel.style.backgroundColor = "skyblue";
+            colorCode.value = 'background-color: skyblue';
+        }
+
+        function lightgreen() {
+            colorModel.style.backgroundColor = "lightgreen";
+            colorCode.value = 'background-color: lightgreen';
+        }
+
+        function oldlace() {
+            colorModel.style.backgroundColor = "oldlace";
+            colorCode.value = 'background-color: oldlace';
+        }
+
+        function aquamarine() {
+            colorModel.style.backgroundColor = "aquamarine";
+            colorCode.value = 'background-color: aquamarine';
+        }
+
+        function chocolate() {
+            colorModel.style.backgroundColor = "chocolate";
+            colorCode.value = 'background-color: chocolate';
+        }
+
+        function chartreuse() {
+            colorModel.style.backgroundColor = "chartreuse";
+            colorCode.value = 'background-color: chartreuse';
+        }
+
+        function aliceblue() {
+            colorModel.style.backgroundColor = "aliceblue";
+            colorCode.value = 'background-color: aliceblue';
+        }
+
+        function bisque() {
+            colorModel.style.backgroundColor = "bisque";
+            colorCode.value = 'background-color: bisque';
+        }
+
+        function crimson() {
+            colorModel.style.backgroundColor = "crimson";
+            colorCode.value = 'background-color: crimson';
+        }
+
+        function cyan() {
+            colorModel.style.backgroundColor = "cyan";
+            colorCode.value = 'background-color: cyan';
+        }
+
+        function blueviolet() {
+            colorModel.style.backgroundColor = "blueviolet";
+            colorCode.value = 'background-color: blueviolet';
+        }
+
+        function brown() {
+            colorModel.style.backgroundColor = "brown";
+            colorCode.value = 'background-color: brown';
+        }
+
+        function blanchedalmond() {
+            colorModel.style.backgroundColor = "blanchedalmond";
+            colorCode.value = 'background-color: blanchedalmond';
+        }
+
+        function rebeccapurple() {
+            colorModel.style.backgroundColor = "rebeccapurple";
+            colorCode.value = 'background-color: rebeccapurple';
+        }
+
+        function royalblue() {
+            colorModel.style.backgroundColor = "royalblue";
+            colorCode.value = 'background-color: royalblue';
+        }
+
+        function violet() {
+            colorModel.style.backgroundColor = "violet";
+            colorCode.value = 'background-color: violet';
+        }
+
+        function teal() {
+            colorModel.style.backgroundColor = "teal";
+            colorCode.value = 'background-color: teal';
+        }
+
+        function thistle() {
+            colorModel.style.backgroundColor = "thistle";
+            colorCode.value = 'background-color: thistle';
+        }
+
+        function turquoise() {
+            colorModel.style.backgroundColor = "turquoise";
+            colorCode.value = 'background-color: turquoise';
+        }
+
+        function olivedrab() {
+            colorModel.style.backgroundColor = "olivedrab";
+            colorCode.value = 'background-color: olivedrab';
+        }
+
+        function orange() {
+            colorModel.style.backgroundColor = "orange";
+            colorCode.value = 'background-color: orange';
+        }
+
+        function orchid() {
+            colorModel.style.backgroundColor = "orchid";
+            colorCode.value = 'background-color: orchid';
+        }
+
+        function orangered() {
+            colorModel.style.backgroundColor = "orangered";
+            colorCode.value = 'background-color: orangered';
+        }
+
+        function palegoldenrod() {
+            colorModel.style.backgroundColor = "palegoldenrod";
+            colorCode.value = 'background-color: palegoldenrod';
+        }
+
+        function palegreen() {
+            colorModel.style.backgroundColor = "palegreen";
+            colorCode.value = 'background-color: palegreen';
+        }
+
+        function paleturquoise() {
+            colorModel.style.backgroundColor = "paleturquoise";
+            colorCode.value = 'background-color: paleturquoise';
+        }
+
+        function palevioletred() {
+            colorModel.style.backgroundColor = "palevioletred";
+            colorCode.value = 'background-color: palevioletred';
+        }
+
+        function papayawhip() {
+            colorModel.style.backgroundColor = "papayawhip";
+            colorCode.value = 'background-color: papayawhip';
+        }
+
+        function peachpuff() {
+            colorModel.style.backgroundColor = "peachpuff";
+            colorCode.value = 'background-color: peachpuff';
+        }
+
+        function peru() {
+            colorModel.style.backgroundColor = "peru";
+            colorCode.value = 'background-color: peru';
+        }
+
+        function pink() {
+            colorModel.style.backgroundColor = "pink";
+            colorCode.value = 'background-color: pink';
+        }
+
+        function plum() {
+            colorModel.style.backgroundColor = "plum";
+            colorCode.value = 'background-color: plum';
+        }
+
+        function powderblue() {
+            colorModel.style.backgroundColor = "powderblue";
+            colorCode.value = 'background-color: powderblue';
+        }
+
+
+        //gradient color 
+        let g_code = document.querySelector('.gradient-code');
+        let g_box = document.querySelector('.gradient-model-box');
+        let g_start_color = document.querySelector('.g-start');
+        let g_mid_color = document.querySelector('.g-mid');
+        let g_end_color = document.querySelector('.g-end');
+
+        let colorDirection;
+
+        function left_to_right() {
+            colorDirection = "to right";
+        }
+
+        function right_to_left() {
+            colorDirection = "to left";
+        }
+
+        function top_to_bottom() {
+            colorDirection = "to bottom";
+        }
+
+        function bottom_to_top() {
+            colorDirection = "to top";
+        }
+
+        function to_topleft() {
+            colorDirection = "to top left";
+        }
+
+        function to_topright() {
+            colorDirection = "to top right";
+        }
+
+        function to_bottomright() {
+            colorDirection = "to bottom right";
+        }
+
+        function to_bottomleft() {
+            colorDirection = "to bottom left";
+        }
+
+
+        //margin code
+        let mg_top = document.querySelector('.mg-top');
+        let mg_btm = document.querySelector('.mg-btm');
+        let mg_left = document.querySelector('.mg-left')
+        let mg_code = document.querySelector('.mg-code');
+        let mg_model_box = document.querySelector('.mg-model-box-container');
+
+        //for DIV Extractor
+        let div_width = document.querySelector('.div-width');
+        let div_height = document.querySelector('.div-height');
+        let div_bg_color = document.querySelector('.div-bg-color');
+        let div_bd_size = document.querySelector('.div-border-size');
+        let div_bd_color = document.querySelector('.div-border-color');
+        let div_radius = document.querySelector('.div-radius');
+        let div_x_post = document.querySelector('.x-post');
+        let div_y_post = document.querySelector('.y-post');
+        let div_blur = document.querySelector('.div-blur');
+        let div_sh_color = document.querySelector('.sh-color');
+        let div_box = document.querySelector('.div-ext-model-box');
+        let div_ext_code = document.querySelector('.div-ext-code');
+
+        function loop() {
+            requestAnimationFrame(loop)
+
+            //for RGB
+            let getRed = r.value;
+            let getGreen = g.value;
+            let getBlue = b.value;
+            let getAlpha = a.value / 100;
+
+
+            extBox.style.background = "rgba(" + getRed + ", " + getGreen + ", " + getBlue + ", " + getAlpha + ")";
+            cExtCode.value = "background-color : " + extBox.style.background
+
+            //for gradient
+            let getStartColor = g_start_color.value;
+            let getEndColor = g_end_color.value;
+            let getMidColor = g_mid_color.value;
+
+            g_box.style.background = "linear-gradient(" + colorDirection + ", " + getStartColor + ', ' + getMidColor + ', ' + getEndColor + ")";
+            g_code.value = "background : " + g_box.style.background;
+
+            //for Margin
+            let getTopMg = mg_top.value + "px";
+            let getBtmMg = mg_btm.value + "px";
+            let getLeftMg = mg_left.value + "px";
+
+
+            mg_model_box.style.cssText = "margin-top: " + getTopMg + "; margin-bottom:" + getBtmMg + "; margin-left:" + getLeftMg;
+            mg_code.value = mg_model_box.style.cssText;
+
+            //for div-extrator
+            let getDivWidth = div_width.value + "px";
+            let getDivHeight = div_height.value + "px";
+            let getDivBgColor = div_bg_color.value;
+            let getDivBdSize = div_bd_size.value + "px";
+            let getDivBdColor = div_bd_color.value;
+            let getDivRadius = div_radius.value + "%";
+            let getDivXPost = div_x_post.value + "px";
+            let getDivYPost = div_y_post.value + "px";
+            let getDivBlur = div_blur.value + "px";
+            let getDivBoxShadow = div_sh_color.value;
+
+            div_box.style.cssText = "width : " + getDivWidth + "; Height : " + getDivHeight + "; background-color :" + getDivBgColor + "; border : " + getDivBdSize + " solid " + getDivBdColor + "; border-radius : " + getDivRadius + "; box-shadow: " + getDivXPost + " " + getDivYPost + " " + getDivBlur + " " + getDivBoxShadow;
+            div_ext_code.value = div_box.style.cssText;
+
+        }
+
+
+        loop()
+
+    </script>
+</body>
+
+</html>
