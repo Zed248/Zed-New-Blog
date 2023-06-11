@@ -429,23 +429,29 @@ body.active {
 
 
 .__section {
-    padding: 0px 10em 0px 10em;
+    padding: 0;
 }
 
 /* ----------------------- Home ------------------ */
-.__background_showcase {
-    position: absolute;
+.__home_showcase_container {
     width: 100%;
-    height: 150vh;
+    height: auto;
     background-image: url('../img/showcase-bg.jpg');
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    z-index: -1;
 }
 
-.__background_showcase.active {
-    opacity: 0.4;
+.__home_showcase_container.active {
+    background-image: none;
+    background-color: #000;
 }
+
+@keyframes pickupbg {
+    from {height: 0;}
+    to {height: 125%;}
+}
+
 ._home_showcase {
     width: 100%;
     height: 90vh;
@@ -462,14 +468,14 @@ body.active {
 
 
 .__introduction_description {
-    padding-top: 10em;
+    padding: 2em 10em 2px 10em;
 }
 
 
 
 ._btns_container {
     width: 100%;
-    height: 100px;
+    height: 300px;
 }
 
 .__introduction_description p {
@@ -499,92 +505,16 @@ body.active {
 }
 
 
-
-
-
-
-
-/* --------------------- Login-in ------------------------ */
-.__log_in_box_container {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--pale-black);
-    position: fixed;
-    left: 0;
-    top: 0;
-}
-
-.__log_in_box {
-    width: 435px;
-    overflow: hidden;
-    border-radius: 15px;
-}
-
-
-.__log_in_items {
-    min-width: 450px;
-    height: auto;
-    background-color: #00000028;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 1em;
-    transition: 1s;
-
-}
-
-.__log_in_items.slide {
-    margin-left: -415px;
-    transition: 1s;
-}
-
-
-._input_container {
-    line-height: 45px;
-}
-
-._input_container ._label {
-    display: inline-block;
-    width: 170px;
-}
-
-._input_container input[type="text"], ._input_container input[type="password"] {
-    background-color: red;
+.__what_i_got {
+    margin: 0px 10em 0px 10em;
 }
 
 
 
-.__sign_up_container {
-    min-width: 370px;
-    height: 500px;
-    background-color: #eceeee;
-    margin: 1em;
-    border-radius: 15px;
-}
 
 
-.__sign_up_container h1 {
-    text-align: center;
-}
 
-.__log_in_container {
-    min-width: 370px;
-    height: 500px;
-    background-color: #eceeee;
-    margin:1em 2em 1em 2em;
-    border-radius: 15px;
-}
-
-
-.__log_in_container h1 {
-    text-align: center;
-}
-
-
-/* ------------------------ display language ----------------------- */
+/* ------ display language ----- */
 .languages {
     width: 100%;
     height: auto;
@@ -615,7 +545,6 @@ body.active {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: blue; */
     padding: 1em;
 }
 
@@ -631,7 +560,6 @@ body.active {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-color: aquamarine; */
     padding: 1em;
 }
 
@@ -766,3 +694,128 @@ body.active {
 
 
 
+/* --------------------- Login-in Section ------------------------ */
+.__log_in_box_container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--pale-black);
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.__log_in_box {
+    width: 435px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+
+.__log_in_items {
+    min-width: 450px;
+    height: auto;
+    background-color: #00000028;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1em;
+    transition: 1s;
+
+}
+
+.__log_in_items.slide {
+    margin-left: -415px;
+    transition: 1s;
+}
+
+
+._input_container {
+    line-height: 45px;
+}
+
+._input_container ._label {
+    display: inline-block;
+    width: 170px;
+}
+
+._input_container input[type="text"], ._input_container input[type="password"] {
+    background-color: red;
+}
+
+
+
+.__sign_up_container {
+    min-width: 370px;
+    height: 500px;
+    background-color: #eceeee;
+    margin: 1em;
+    border-radius: 15px;
+}
+
+
+.__sign_up_container h1 {
+    text-align: center;
+}
+
+.__log_in_container {
+    min-width: 370px;
+    height: 500px;
+    background-color: #eceeee;
+    margin:1em 2em 1em 2em;
+    border-radius: 15px;
+}
+
+
+.__log_in_container h1 {
+    text-align: center;
+}
+
+
+/* ------------------------------ Software Download ------------------------- */
+.__download_showcase {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.__software_download_container {
+    width: 100%;
+}
+
+
+.__download_section {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.__application_items {
+    min-width: 280px;
+}
+
+
+.__category_dwn {
+}
+
+.__application_items {
+    width: 100%;
+}
+
+.__input_dwn_con {
+    background-color: #fff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.dwn-icon {
+    width: 35px;
+    margin: 0px 0.3em 0px 0.3em;
+}

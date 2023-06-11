@@ -74,10 +74,18 @@
 
 
     .__section {
-        padding: 0px 2em 0px 2em;
+        padding: 0px
     }
 
     /* ----------------------- Home ------------------ */
+    .__home_showcase_container {
+        width: 100%;
+        height: auto;
+        background-image: url('../img/showcase-bg.jpg');
+        background-size: cover;
+        background-position-x: -5cm;
+        background-repeat: no-repeat;
+    }
 
     ._home_showcase {
         width: 100%;
@@ -89,8 +97,9 @@
         height: 100px;
     }
 
-    .__introduction_description p {
+    .__introduction_description {
         font-size: large;
+        padding: 2em;
     }
 
 
@@ -103,9 +112,20 @@
         background-color: var(--pure-white);
         padding: 1em;
         border-radius: 12px;
+        padding: 2em;
     }
 
+    .__what_i_got {
+        margin: 0px 2em 0px 2em;
+    }
+    
 
+    .__footer_link_container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
 
 
 }

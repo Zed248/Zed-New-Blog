@@ -6,165 +6,297 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zed Blog</title>
-    <link rel="stylesheet" type="text/css" href="../res/main.css">
-    <link rel="stylesheet" type="text/css" href="../res/responsive.css">
-    <link rel="stylesheet" type="text/css" href="../fontawesome/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="../res/main.css" type="text/css">
+    <link rel="stylesheet" href="../res/responsive.css" type="text/css">
+
 </head>
 
 <body>
     <div class="wrapper">
-        <nav>
-            <div class="switches">
-                <span class="mood-label">Dark</span><i id="mood-icon" class="fa-solid fa-moon fa-1x"></i>
-                <span class="login-label">Log in</span><i class="fa-solid fa-unlock fa-1x"></i>
-                <span class="menu-label">Menu</span><i id="menu_icon" class="fa-solid fa-sliders fa-1x"></i>
+        <div class="__switches _flex_row _flex_end_row">
+            <div id="_mood_btn">
+                <span class="_mood-label _pad_left_1 _pad_right_1">Dark</span><i id="mood-icon"
+                    class="fa-solid fa-moon fa-1x"></i>
             </div>
-            <div class="navigation" id="navbar">
-                <div class="sub-nav-bar">
-                    <p class="blog-title">Zed Blog</p>
-                    <ul class="links">
-                        <a href="../index.html">
-                            <li>Home</li>
-                        </a>
-                        <a href="../pages/myview.html">
-                            <li>myView</li>
-                        </a>
-                        <a href="../pages/about.html">
-                            <li>About me</li>
-                        </a>
-                    </ul>
-                </div>
-                <div class="progress-container">
-                    <div class="progress-bar" id="myScrollIndicatingBar"></div>
+
+            <div id="_side_bar_btn">
+                <span class="_menu-label _pad_left_1 _pad_right_1">Menu</span><i id="menu_icon"
+                    class="fa-solid fa-sliders fa-1x"></i>
+            </div>
+
+            <a href="pg/login.html"><span class="_login-label _pad_left_1 _pad_right_1">Log Out</span><i
+                    class="fa-solid fa-regular fa-arrow-right-from-bracket _pad_right_2"></i></a>
+        </div>
+        <nav class="__nav">
+            <div class="__progress-container">
+                <div class="__progress-bar _default_bgcolor_1" id="myScrollIndicatingBar"></div>
+            </div>
+            <div class="__nav_link_container _center _flex_row _flex_start_row">
+                <h1 class="__title">Zed</h1>
+                <div class="__link">
+                    <a href="">Home</a>
+                    <a href="">JS Canvas</a>
+                    <a href="./pg/playground/index.html">JS Playground</a>
                 </div>
             </div>
-            <div class="side-bar-container">
-                <nav class="link">
-                    <ul class="link-holder">
-                        <li class="logo-and-text parent">
+
+            <div class="__sidebar_container" id="side_bar_container">
+                <nav class="__sidebar_link">
+                    <ul class="__link_holder">
+                        <li class="_logo_and_text _parent">
                             <a href="#" class="ok">
                                 <i class="fas fa-code"></i>
                                 <span class="nav-item">Web Development</span>
                             </a>
-                            <ul class="child">
-                                <li><a href="../pages/html5.html"><i class="fa-brands fa-html5"></i>HTML</a>
+                            <ul class="_child">
+                                <li><a href="./pg/html5.html"><i class="fa-brands fa-html5"></i>HTML</a>
                                 </li>
-                                <li><a href="../pages/css3.html"><i class="fa-brands fa-css3-alt"></i>CSS</a>
+                                <li><a href="./pg/css3.html"><i class="fa-brands fa-css3-alt"></i>CSS</a>
                                 </li>
-                                <li><a href="../pages/js.html"><i class="fa-brands fa-node-js"></i>JavaScript</a>
+                                <li><a href="./pg/js.html"><i class="fa-brands fa-node-js"></i>JavaScript</a>
                                 </li>
-                                <li><a href="../pages/tutorial.html"><i class="fa-brands fa-youtube"></i>Tutorial
+                                <li><a href="./pg/playground/index.html"><i
+                                            class="fa-solid fa-laptop-code"></i>Playground</a>
+                                </li>
+                                <li><a href="./pg/tutorial.html"><i class="fa-brands fa-youtube"></i>Tutorial
                                         Video</a></li>
                             </ul>
 
                         </li>
-                        <li class="logo-and-text">
-                            <a href="../pages/about.html">
+                        <li class="_logo_and_text">
+                            <a href="./pg/about.html">
                                 <i class="fas fa-user"></i>
                                 <span class="nav-item">About</span>
                             </a>
                         </li>
-                        <li class="logo-and-text">
-                            <a href="../pages/photoshop.html">
+                        <li class="_logo_and_text">
+                            <a href="./pg/photoshop.html">
                                 <i class="fas fa-shapes"></i>
                                 <span class="nav-item">Photoshop</span>
                             </a>
                         </li>
 
-                        <li class="logo-and-text">
-                            <a href="" class="active">
+                        <li class="_logo_and_text">
+                            <a href="./pg/software.html">
                                 <i class="fa-brands fa-app-store-ios"></i>
                                 <span class="nav-item">Software Download</span>
                             </a>
                         </li>
 
-                        <li class="logo-and-text">
-                            <a href="../pages/youtube.html">
+                        <li class="_logo_and_text">
+                            <a href="./pg/youtube.html">
                                 <i class="fa-brands fa-youtube"></i>
                                 <span class="nav-item">My Channel</span>
                             </a>
                         </li>
-
-
-
-
                     </ul>
+
                 </nav>
             </div>
+
         </nav>
         <section>
-            <div class="software-download-show-case">
-                <h1>Select to download your software</h1>
-                <select class="d-list" onchange="software()">
-                    <option value="">--Select Your Software to Download --</option>
-                    <option value="1">Adobe Photoshop CS3</option>
-                    <option value="2">Adobe Photoshop CS6 Extended</option>
-                    <option value="3">Microsoft Office 2013 Professional Plus</option>
-                    <option value="4">Microsoft Office 2016 Professional Plus</option>
-                    <option value="5">Internet Download Manager 6.0</option>
-                    <option value="6">Adobe PageMaker 7.0</option>
-                    <option value="7">Mavis Beacon Typing Tutor</option>
-                    <option value="8">Zapya</option>
-                    <option value="9">Visual Studio Code</option>
-                </select>
-                <p>Click Get Link and Download Your Software</p>
-                <h4 id="soft_name">Software Download Publisher</h4>
-                <div class="software-d-image-container">
-                    <img id="soft_img" src="">
-                </div>
-                <p id="soft_descri">You can download software on my blog for free and safe!</p>
-                <a id="get_link">Get Link</a>
+            <div class="__download_showcase">
+                <h1>Download Software</h1>
             </div>
+            <div class="__software_download_container">
+                <h1>Select to download</h1>
 
+                <div class="__download_section">
+
+                    <div class="__category_dwn">
+                        <h3>Web Browsers</h3>
+                        <p>The best browsers for Windows</p>
+                        <div class="__application_items">
+                            <div class="__input_dwn_con">
+                                <input type="checkbox" id="chrome" name="chrome"><img class="dwn-icon"
+                                src="../img/chrome.png"><label class="input-label-dwn" for="chrome">Chrome</label>
+                            </div>
+                            <div class="__input_dwn_con">
+                                <input type="checkbox" id="firefox" name="firefox"><img class="dwn-icon"
+                                src="../img/firefox.png"><label class="input-label-dwn" for="firefox">Firefox</label>
+                            </div>
+                            <div class="__input_dwn_con">
+                                <input type="checkbox" id="ucbroswer" name="ucbroswer"><img class="dwn-icon"
+                                src="../img/ucbrowser.png"><label class="input-label-dwn"
+                                for="ucbroswer">UCbroswer</label>
+                            </div>
+                            <div class="__input_dwn_con">
+                                <input type="checkbox" id="opera" name="opera"><img class="dwn-icon"
+                                src="../img/opera.png"><label class="input-label-dwn" for="opera">Opera</label>
+                            </div>
+                            <div class="__input_dwn_con">
+                                <input type="checkbox" id="msedge" name="msedge"><img class="dwn-icon"
+                                src="../img/msedge.png"><label class="input-label-dwn" for="msedge">MsEdge</label>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="category-dwn">
+                        <h3>Document Tools</h3>
+                        <p>The best browsers for Windows</p>
+                        <div class="__application_items">
+                            <div class="__input_dwn_con">
+                                <input type="checkbox" id="msoffice" name="msoffice"><img class="dwn-icon"
+                                src="../img/msoffice.png"><label class="input-label-dwn" for="msoffice">Microsoft
+                                Office</label>
+                            </div>
+                            <div class="__input_dwn_con">
+                                <input type="checkbox" id="pagemaker" name="pagemaker"><img class="dwn-icon"
+                                src="../img/pagemaker.png"><label class="input-label-dwn" for="pagemaker">Page Maker
+                                7.0</label>
+                            </div>
+                            <div class="__input_dwn_con">
+                                <input type="checkbox" id="acrobat" name="acrobat"><img class="dwn-icon"
+                                src="../img/acrobat.png"><label class="input-label-dwn" for="acrobat">Adobe
+                                Acrobat</label>
+                            </div>
+                            
+                            <input type="checkbox" id="pdfviewer" name="pdfviewer"><img class="dwn-icon"
+                                src="../img/pdfviewer.jpg"><label class="input-label-dwn" for="pdfviewer">PDF
+                                Viewer</label>
+                            <input type="checkbox" id="adobe-indesign" name="adobe-indesign"><img class="dwn-icon"
+                                src="../img/adobe-indesign.jpg"><label class="input-label-dwn"
+                                for="adobe-indesign">Adobe
+                                Indesign</label>
+                        </div>
+
+                    </div>
+
+                    <div class="category-dwn">
+                        <h3>Design Application</h3>
+                        <p>The best tools for Design</p>
+                        <div class="__application_items">
+                            <div class="__input_dwn_con">
+                                <input type="checkbox" id="zapya" name="photoshopcs6"><img class="dwn-icon"
+                                src="../img/photoshopcs6.png"><label class="input-label-dwn" for="photoshopcs6">Adobe Photoshop CS6</label>
+                            </div>
+                            <div class="__input_dwn_con">
+                                <input type="checkbox" id="firefox" name="firefox"><img class="dwn-icon"
+                                src="../img/firefox.jpg"><label class="input-label-dwn" for="firefox">Firefox</label>
+                            </div>
+                            <div class="__input_dwn_con">
+                                <input type="checkbox" id="ucbroswer" name="ucbroswer"><img class="dwn-icon"
+                                src="../img/ucbroswer.jpg"><label class="input-label-dwn"
+                                for="ucbroswer">UCbroswer</label>
+                            </div>
+                            <div class="__input_dwn_con">
+                                <input type="checkbox" id="opera" name="opera"><img class="dwn-icon"
+                                src="../img/opera.jpg"><label class="input-label-dwn" for="opera">Opera</label>
+                            </div>
+                            <div class="__input_dwn_con">
+                                <input type="checkbox" id="msedge" name="msedge"><img class="dwn-icon"
+                                src="../img/msedge.jpg"><label class="input-label-dwn" for="msedge">MsEdge</label>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="category-dwn">
+                        <h3>File Transfer Tools</h3>
+                        <p>The fastest tools for file sharing</p>
+                        <div class="__application_items">
+                            <div class="__input_dwn_con">
+                                <input type="checkbox" id="zapya" name="zapya"><img class="dwn-icon"
+                                src="../img/zapya.png"><label class="input-label-dwn" for="zapya">Zapya</label>
+                            </div>
+                            <div class="__input_dwn_con">
+                                <input type="checkbox" id="firefox" name="firefox"><img class="dwn-icon"
+                                src="../img/firefox.png"><label class="input-label-dwn" for="firefox">Firefox</label>
+                            </div>
+                            <div class="__input_dwn_con">
+                                <input type="checkbox" id="ucbroswer" name="ucbroswer"><img class="dwn-icon"
+                                src="../img/ucbroswer.jpg"><label class="input-label-dwn"
+                                for="ucbroswer">UCbroswer</label>
+                            </div>
+                            <div class="__input_dwn_con">
+                                <input type="checkbox" id="opera" name="opera"><img class="dwn-icon"
+                                src="../img/opera.jpg"><label class="input-label-dwn" for="opera">Opera</label>
+                            </div>
+                            <div class="__input_dwn_con">
+                                <input type="checkbox" id="msedge" name="msedge"><img class="dwn-icon"
+                                src="../img/msedge.jpg"><label class="input-label-dwn" for="msedge">MsEdge</label>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="category-dwn">
+                        <h3>Other Useful Tools</h3>
+                        <p>Useful tools for Windows</p>
+                        <div class="__application_items">
+                            <div class="__input_dwn_con">
+                                <input type="checkbox" id="zip" name="zip"><img class="dwn-icon"
+                                src="../img/zip.png"><label class="input-label-dwn" for="zip">Zip</label>
+                            </div>
+                            <div class="__input_dwn_con">
+                                <input type="checkbox" id="fruityloop" name="fruityloop"><img class="dwn-icon"
+                                src="../img/fruityloop.png"><label class="input-label-dwn" for="fruityloop">Fruity Loop</label>
+                            </div>
+                            <div class="__input_dwn_con">
+                                <input type="checkbox" id="ucbroswer" name="ucbroswer"><img class="dwn-icon"
+                                src="../img/ucbroswer.jpg"><label class="input-label-dwn"
+                                for="ucbroswer">UCbroswer</label>
+                            </div>
+                            <div class="__input_dwn_con">
+                                <input type="checkbox" id="opera" name="opera"><img class="dwn-icon"
+                                src="../img/opera.jpg"><label class="input-label-dwn" for="opera">Opera</label>
+                            </div>
+                            <div class="__input_dwn_con">
+                                <input type="checkbox" id="msedge" name="msedge"><img class="dwn-icon"
+                                src="../img/msedge.jpg"><label class="input-label-dwn" for="msedge">MsEdge</label>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
 
 
 
         </section>
-        <footer>
-            <div class="footer-links">
-                <a href=""><i class="fa-brands fa-facebook fa-2x"></i></a>
-                <a href=""><i class="fa-brands fa-tiktok fa-2x"></i></a>
-                <a href=""><i class="fa-brands fa-telegram fa-2x"></i></a>
-                <a href=""><i class="fa-brands fa-youtube fa-2x"></i></a>
-                <a href=""><i class="fa-brands fa-instagram fa-2x"></i></a>
+        <footer class="__footer _flex_col _flex_end_row _default_bgcolor_1">
+            <div class="_footer_search">
+                <h4>Let's go get it</h4>
+                <div class="f_input_container">
+                    <input type="text" placeholder="Search">
+                    <i class="fa-brands fa-searchengin fa-2x"></i>
+                </div>
             </div>
-
-            <div class="footer-items">
-                <div class="about-us-link">
-                    <h4>About me</h4>
-                    <a href="../pages/about.html">Who I am</a>
-                    <a href="../pages/hireme.html">Hire me</a>
-                    <a href="../pages/news.html">News</a>
-                    <a href="../pages/project.html">Current Process of Project</a>
+            <div class="__footer_link_container">
+                <div class="_footer_about_us">
+                    <h5>About me</h5>
+                    <a href="">Contact me</a>
+                    <a href="">News</a>
+                    <a href="">Projects</a>
+                </div>
+                <div class="_footer_services">
+                    <h5>Services</h5>
+                    <a href="">Windows Tip & Tricks</a>
+                    <a href="">Software Installation</a>
+                    <a href="">Web Development</a>
+                    <a href="">Build a Web Page</a>
+                    <a href="">Web Application</a>
+                </div>
+                <div class="_footer_support">
+                    <h5>Support</h5>
+                    <a href="">Computer fix (Online)</a>
+                    <a href="">Software Download (PC)</a>
+                    <a href="">Technical PDF Books</a>
+                    <a href="">Tips & Tricks</a>
                 </div>
 
-                <div class="service">
-                    <h4>Service</h4>
-                    <a href="../pages/windows.html">Windows Installation & Troubleshooting</a>
-                    <a href="../pages/windows.html">Softwares Istallation</a>
-                    <a href="../pages/my-party.html">Freelence Projects</a>
-                </div>
-
-                <div class="benefit">
-                    <h4>Get Benefits with me</h4>
-                    <li>Building Web Page</li>
-                    <li>Create Web Application</li>
-                    <li>Mobile Phone Application</li>
-                    <li>Building frameworks for Web Page</li>
-                    <li>Troubleshooting Windows</li>
-                </div>
-
-                <div class="support">
-                    <h4>Support</h4>
-                    <a href="../pages/faq.html">FAQs</a>
-                    <a href="../pages/about.html">Contact me</a>
-                    <a href="../pages/software.html">Software Download (PC)</a>
-                </div>
-
-                <div class="copyright">
-                    <h3>Zed Blog</h3>
-                    <p>Rakkha's Design &copy; 2023</p>
-                </div>
+            </div>
+            <div class="__copyright _center">
+                Copyright Rakkha's Template &COPY; 2023
             </div>
         </footer>
     </div>
