@@ -435,7 +435,7 @@ body.active {
 /* ----------------------- Home ------------------ */
 .__home_showcase_container {
     width: 100%;
-    height: auto;
+    height: 150vh;
     background-image: url('../img/showcase-bg.jpg');
     background-size: cover;
     background-position: center;
@@ -787,17 +787,23 @@ body.active {
     width: 100%;
 }
 
+.__software_download_container h1 {
+    text-align: center;
+    margin: 1em;
+}
+
 
 .__download_section {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
 }
 
 .__application_items {
-    min-width: 280px;
+    min-width: 300px;
+    margin: 1em;
 }
 
 
