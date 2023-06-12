@@ -314,7 +314,7 @@ body.active {
     position: absolute;
     left: 0;
     top: 210px;
-    height: auto;
+    height: 340px;
     background-color: black;
     overflow: hidden;
     border-radius: 8px;
@@ -802,12 +802,16 @@ body.active {
 }
 
 .__application_items {
-    min-width: 300px;
-    margin: 1em;
+    
 }
 
 
 .__category_dwn {
+    background-color: #00b6791f;
+    border-radius: 12px;
+    min-width: 300px;
+    margin: 1em;
+    padding: 1em;
 }
 
 .__application_items {
@@ -815,13 +819,47 @@ body.active {
 }
 
 .__input_dwn_con {
-    background-color: #fff;
+    background-color: transparent;
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
+
+.input-label-dwn {
+    user-select: none;
+}
+
+
+
 .dwn-icon {
     width: 35px;
     margin: 0px 0.3em 0px 0.3em;
+}
+
+.alert.alert-warning {
+    padding: 0;
+}
+
+.__download_link_extractor_container {
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3em 0px 3em 0px;
+    overflow: hidden;
+}
+
+.__link_items {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.__link_items a {
+    line-height: 45px;
+    cursor: pointer;
 }
