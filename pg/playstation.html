@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Text-to-Speech Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    #text-input {
+      width: 400px;
+      height: 150px;
+      margin: 20px auto;
+      padding: 10px;
+      resize: none;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      margin: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #45a049;
+    }
+
+    .button:disabled {
+      background-color: #aaa;
+      cursor: not-allowed;
+    }
+
+    #voice-select {
+      margin-bottom: 20px;
+    }
+
+    #speed-input {
+      width: 200px;
+      margin: 10px auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Text-to-Speech</h1>
+  <textarea id="text-input" placeholder="Enter text to speak" rows="4" cols="50"></textarea>
+  <select id="voice-select"></select>
+  <input type="range" id="speed-input" min="0.5" max="2" step="0.1" value="1">
+  <button id="speak-button" class="button">Speak</button>
+  <button id="stop-button" class="button" disabled>Stop</button>
+  <button id="slow-down-button" class="button">Slow Down</button>
+  <button id="speed-up-button" class="button">Speed Up</button>
+
+
+  
+  <script>
+    const speakButton = document.getElementById('speak-button');
+    const stopButton = document.getElementById('stop-button');
+    const textInput = document.getElementById('text-input');
+    const voiceSelect = document.getElementById('voice-select');
+    const speedInput = document.getElementById('speed-input');
+    const slowDownButton = document.getElementById('slow-down-button');
+    const speedUpButton = document.getElementById('speed-up-button');
+    let speechSynthesisUtterance = null;
+    let currentSpeed = parseFloat(speedInput.value);
+
+    // Load available voices
+    window.speechSynthesis.onvoiceschanged = () => {
+      const voices = speechSynthesis.getVoices();
+      voices.forEach(voice => {
+        const option = document.createElement('option');
+        option.value = voice.name;
+        option.textContent = `${voice.name} (${voice.lang})`;
+        voiceSelect.appendChild(option);
+      });
+    };
+
+    speakButton.addEventListener('click', () => {
+      const text = textInput.value.trim();
+      if (text !== '') {
+        speechSynthesisUtterance = new SpeechSynthesisUtterance(text);
+        const selectedVoice = voiceSelect.value;
+        const voices = speechSynthesis.getVoices();
+        const voice = voices.find(v => v.name === selectedVoice);
+        if (voice) {
+          speechSynthesisUtterance.voice = voice;
+        }
+        speechSynthesisUtterance.rate = currentSpeed;
+        speechSynthesis.speak(speechSynthesisUtterance);
+        speakButton.disabled = true;
+        stopButton.disabled = false;
+        speechSynthesisUtterance.onend = () => {
+          speakButton.disabled = false;
+          stopButton.disabled = true;
+        };
+      }
+    });
+
+    stopButton.addEventListener('click', () => {
+      if (speechSynthesisUtterance !== null) {
+        speechSynthesis.cancel();
+        speakButton.disabled = false;
+        stopButton.disabled = true;
+      }
+    });
+
+    slowDownButton.addEventListener('click', () => {
+      currentSpeed -= 0.1;
+      if (currentSpeed < 0.1) {
+        currentSpeed = 0.1;
+      }
+      speedInput.value = currentSpeed;
+      if (speechSynthesisUtterance !== null) {
+        speechSynthesisUtterance.rate = currentSpeed;
+      }
+    });
+
+    speedUpButton.addEventListener('click', () => {
+      currentSpeed += 0.1;
+      if (currentSpeed > 2) {
+        currentSpeed = 2;
+      }
+      speedInput.value = currentSpeed;
+      if (speechSynthesisUtterance !== null) {
+        speechSynthesisUtterance.rate = currentSpeed;
+      }
+    });
+
+    speedInput.addEventListener('input', () => {
+      currentSpeed = parseFloat(speedInput.value);
+      if (speechSynthesisUtterance !== null) {
+        speechSynthesisUtterance.rate = currentSpeed;
+      }
+    });
+  </script>
+</body>
+</html>
+
